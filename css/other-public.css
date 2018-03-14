@@ -1,0 +1,140 @@
+
+/* 表头start */
+    header {
+        /* z-index: 2; */
+        width: 100%;
+        height: 60px;
+        background-color: rgba(89,68,195,1);
+        box-shadow: 2px 2px 4px 0 rgba(0,0,0,0.20);
+        /* position: fixed; */
+        min-width: 500px;
+        line-height: 60px;
+        font-family: PingFangSC-Regular;
+        font-size: 14px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+    }
+    /* 左侧 */
+    .logo {
+        display: inline-block;
+        height: 33px;
+        margin-left: 4.3%;
+        margin-top: 14px;
+        line-height: 33px;
+    }
+    .logo img {
+        width: 76.8px;
+        height: 25px;
+        /* vertical-align: middle; */
+        float: left;
+        margin-top: 5px;
+        margin-right: 19.2px;
+    }
+    .logo-line {
+        display: inline-block;
+        width: 2px;
+        height: 24px;
+        background: #fff;
+        float: left;
+        margin-top: 4px;
+        /* margin: 5px 17px auto 19.2px; */
+
+    }
+    .logo-text {
+        color: #FFFFFF;
+        font-size: 24px;
+        margin-left: 17px;
+    }
+    .not-login a,.login-state>a {
+        color: #fff;
+    }
+    /* 右侧 */
+    .not-login,.login-state {
+        display: inline-block;
+        margin-right: 30px; 
+    }
+    .not-login-tologin {
+        display: inline-block;
+        margin-right: 25px;
+    }
+    .nav-head {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+    .nav-name {
+        margin-right: 10px;
+    }
+
+    .myorder {
+        margin-left: 40px;
+    }
+    /* 三角框 */
+    .triangle-div {
+        display: inline-block;
+        position: relative;
+    }
+    .triangle {
+        cursor: pointer;
+    }
+    .triangle-set {
+        position: absolute;
+        left: -78px;
+        top: 54px;
+        width: 109px;
+        height: 124px;
+        background: #fff;
+        border: 1px solid #F2EEF3;
+        box-shadow: 0 2px 6px 0 rgba(0,0,0,0.10);
+    }
+    .triangle:hover{
+        transform: rotate(180deg);
+    }
+    .triangle {
+        transition: all 0.2s;
+    }
+    .triangle-div:hover .triangle-set{
+        opacity: 1;
+    }
+    .triangle-set {
+        transition: all 0.5s;
+        opacity: 0;
+    }
+    .horn {
+        display: inline-block;
+        position: absolute;
+        top: -10px;
+        left: 77px;
+        border-bottom: 5px solid #fff;
+        border-top: 5px solid transparent;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;  
+    }
+    .triangle-set li {
+        line-height: 42px;
+        text-align: center;
+    }
+    .triangle-set li img {
+        margin-right: 6px;
+    }
+    .triangle-set li a {
+        font-family: HiraginoSansGB-W3;
+        font-size: 14px;
+        color: #222629;
+        letter-spacing: 0;
+    }
+/* 表头end */
+/* 尾部start */
+footer {
+    height: 59px;
+    background: #5944C3;
+    line-height: 59px;
+    margin: 0 auto;
+    font-family: PingFangSC-Regular;
+    font-size: 13px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+}
+/* 尾部end */

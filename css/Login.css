@@ -1,0 +1,64 @@
+
+/* 登录框开始 */
+    .login-div {
+        width: 449px;
+        height: 465px;
+        margin: auto 215px auto auto;
+        background: #fff;
+    }
+    .login-content {
+        width: 379px;
+        margin: 0 auto;
+    }
+    /* 登录标题 */
+    .login-title {
+        width: 449px;
+        height: 48px;
+    }
+    .login-title li,.login-title button {
+        width: 224px;
+        font-size: 18px;
+        border-radius: 0;
+    }
+    .account-login-title {
+        position: relative;
+    }
+    .code-login-title {
+        position: relative;
+    }
+    .account-login {
+        margin: 61.3px auto 57px auto;
+    }
+    .account-login input {
+        margin-bottom: 5px;
+    }
+    .forget-div {
+        margin: -10px 0 16px auto;
+    }
+    .forget {
+        font-family: HiraginoSansGB-W3;
+        font-size: 14px;
+        color: #3E3E3E;
+        letter-spacing: 0;
+    }
+    
+     /* 三角 */
+     .triangle {
+         position: absolute;
+         left: 109px;
+         top: 40px;
+         border-top: 6px solid transparent;
+         border-left: 6px solid transparent;
+         border-right: 6px solid transparent;
+         border-bottom: 6px solid transparent;
+     }
+     .triangle-selected {
+        border-top: 6px solid #5944C3;
+     }
+    /* 短信快捷登录开始 */
+        .code-login {
+            margin: 45px auto;
+        }
+    /* 短信快捷登录结束 */
+  
+/* 登录框结束 */

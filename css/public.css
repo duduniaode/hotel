@@ -1,0 +1,32 @@
+/* 公共样式 */
+.fl {
+    float: left;
+}
+.fr {
+    float:right;
+}
+.ac {
+    text-align: center;
+}
+.ma {
+    margin: 0 auto;
+}
+body {
+    min-width: 1440px;
+}
+
+
+
+.error {
+    color: #f00;
+    height: 21px;
+    width: 379px;
+    margin: 0 auto;
+    text-align: left;
+    padding-left: 13px;
+    font-size: 14px;
+    line-height: 21px;
+}
+li {
+    margin-bottom: 0;
+}

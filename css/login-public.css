@@ -1,0 +1,127 @@
+/* 注册、登录、找回密码公共样式 */
+
+/* 头部start */
+    header {
+        max-width: 1010px;
+        margin: 70px auto 34px auto;
+    }
+    header a {
+        display: inline-block;
+        width: 220px;
+        height: 33px;
+        line-height: 33px;
+        background: url(../img/logo_white_color.png) no-repeat;
+        background-size: 76.8px 25px;
+        background-position: left;
+    }
+    .hotel-title {
+        position: relative;
+        float: right;
+        font-family: PingFangSC-Regular;
+        font-size: 24px;
+        color: #5944C3;
+        letter-spacing: 0;
+    }
+    .header-line {
+        position: absolute;
+        display: inline-block;
+        width: 2px;
+        height: 24px;
+        background: #5944C3;
+        top: 5px;
+        left: -23px;
+    }
+/* 头部end */
+/* 中心部分start */
+
+    main {
+        max-width: 100%;
+        height: 591px;
+        padding-top: 66px;
+        background: url(../img/bg_sign.png) no-repeat;
+        background-size: 100% 100%;
+    }
+
+    input, button, .title {
+        font-family: HiraginoSansGB-W3;
+        font-size: 14px;
+        color: #3E3E3E;
+        letter-spacing: 0;
+    }
+    .title,.btn-register,.btn-login {
+        font-size: 18px;
+    }
+    input, button {
+        width: 379px;
+        height: 40px;
+        border-radius: 3px;
+    }
+    input {
+        text-indent: 1em;
+        border: 1px solid rgba(0,0,0,.2);
+        opacity: 0.7;
+    }
+    /* input中的字体 */
+    /* input::-moz-placeholder {
+        color: rgba(62,62,62,.7);
+    } */
+    input:focus {
+        border: 1px solid #5944c3;
+    }
+    .code-input {
+        width: 136px;
+    }
+    button {
+        color: #fff;
+        background: rgba(0, 0, 0, .35);
+        cursor: pointer;
+        margin: 0;
+    }
+    .title {
+        text-align: center;
+        margin-bottom: 33px;
+    }
+    main li,.tologin-div div,.toreg-div div {
+        width: 384px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .graphical-input {
+        width: 262px;
+    }
+    .getcode,.graphical-code,.seecode {
+        width: 105px;
+        margin-left: 11px;
+    }
+    .graphical-code {
+        display: inline-block;
+        height: 40px;
+        background-color: #d8d8d8;
+        float: right;
+    }
+  
+    /* 已有账号 */
+    .tologin-div,.toreg-div {
+        margin-top: 25px;
+        border-top: 1px solid rgba(0, 0, 0, .1);
+        padding-top: 21px;
+    }
+    .tologin-div div,.toreg-div div {
+        line-height: 33px;
+    }
+    .tologin,.toreg {
+        width: 75px;
+        height: 30px;
+        background: #5944C3;
+    }
+/* 中心部分end */
+/* 尾部start */
+    footer {
+        margin: 79px auto 201px auto;
+        font-family: PingFangSC-Regular;
+        font-size: 13px;
+        color: #3E3E3E;
+        letter-spacing: 0;
+        text-align: center;
+    }
+/* 尾部end */

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册-酒店项目</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/login-public.css">
+    <link rel="stylesheet" href="../css/Register.css">
+</head>
+<body>
+  
+   <main>
+        <div class="register">
+            <div class="title">注册APIS账号</div>
+            <ul>
+                <li>
+                    <input type="text" class="phone" placeholder="请输入手机号码" maxlength="11">
+                    <div class="phone-error error"></div>
+                </li>
+                <li>
+                    <input type="text" class="graphical-input" placeholder="输入右侧图文验证码">
+                    <div class="graphical-code"></div>
+                    <div class="graphical-error error"></div>
+                </li>
+                <li class="clearfix">
+                    <input type="text" class="code-input fl" placeholder="输入短信验证码" maxlength="6">
+                    <button class="getcode fr">获取验证码</button>
+                    <button class="seecode fr" >查看验证码</button>
+                    <div class="code-error error fl"></div>
+                </li>
+                <li>
+                    <input type="password" class="password" placeholder="输入6~32位密码" autocomplete="off" maxlength="32">
+                    <div class="password-error error"></div>
+                </li>
+                <li>
+                    <input type="password" class="repassword" placeholder="请重复密码" autocomplete="off" maxlength="32">
+                    <div class="repassword-error error"></div>
+                </li>
+                <li>
+                    <button class="btn-register">注册</button>
+                </li>
+            </ul>
+            <div class="tologin-div">
+               <div>
+                    <span class="fl">已有APIS账号</span>
+                     <a href="Login.html" class="fr"><button class="tologin">登录</button></a>
+               </div>
+            </div>   
+        </div>
+   </main>
+  
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="../js/login-common.js"></script>
+<script src="../js/url.js"></script>
+<script src="../js/Register.js"></script>
+</html>
