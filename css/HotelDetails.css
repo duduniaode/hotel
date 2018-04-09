@@ -1,0 +1,456 @@
+
+main {
+    width: 1012px;
+    margin: 0 auto;
+}
+/* 酒店标题start */
+   /* 酒店名称start */
+    .hotel-title-div {
+        margin-bottom: 19px;
+        margin-top: 31px;
+    }
+    .hotel-name-div {
+        margin-right: 121px;
+    }
+    .hotel-name {
+        margin-bottom: 8px;
+    }
+    .hotel-name-text {
+        font-family: HiraginoSansGB-W6;
+        font-size: 16px;
+        color: #3E3E3E;
+        margin-right: 99px;
+    }
+    .hotel-start img {
+        width: 14px;
+        height: 14px;
+    }
+    .hotel-address {
+        font-family: PingFangSC-Regular;
+        font-size: 13px;
+        color: #3E3E3E;
+    }
+    .map-link {
+        opacity: 0.7;
+        font-family: HiraginoSansGB-W3;
+        font-size: 13px;
+        color: #3E3E3E;
+        cursor: pointer;
+    }
+   /* 酒店名称end */
+   /* 酒店评分start */
+    .hotel-score-div {
+        width: 127px;
+        height: 41px;
+        border-left: 1px dashed rgba(0,0,0,0.35);
+        border-right: 1px dashed rgba(0,0,0,0.35);
+        text-align: center;
+        margin-right: 22px;
+    }
+    .hotel-score-div {
+        font-family: HiraginoSansGB-W3;
+        font-size: 14px;
+        color: #3E3E3E;;
+        line-height: 21px;
+    }
+    .hotel-score {
+        font-family: HiraginoSansGB-W6;
+        color: #5944C3;
+    }
+    .total-score {
+        font-size: 13px;
+    }
+    
+   /* 酒店评分end */
+   /* 酒店价格start */
+    .hotel-price-div {
+        font-family: HiraginoSansGB-W3;
+        font-size: 13px;
+        color: 3e3e3e;
+        height: 41px;
+        line-height: 41px;
+    }
+    .hotel-price {
+        font-family: PingFangSC-Semibold;
+        font-size: 20px;
+        color: #FB430A;
+    }
+   /* 酒店价格end */
+   /* 微信start */
+    .wechat-all {
+        position: relative;
+    }
+    .wechat-btn {
+        width: 83px;
+        height: 38px;
+        background: #5944C3;
+        border-radius: 3px;
+        font-family: PingFangSC-Regular;
+        font-size: 14px;
+        color: #FFFFFF;
+        letter-spacing: 2.33px;
+    }
+    .wechat-btn img {
+        width: 18px;
+        height: 18px;
+        margin-bottom: 2px;
+    }
+    .wechat-div {
+        position: absolute;
+        width: 183px;
+        height: 213px;
+        background: #FFFFFF;
+        box-shadow: 0 0 6px 0 rgba(0,0,0,0.12), 0 6px 6px 0 rgba(0,0,0,0.18);
+        text-align: center;
+        top: 50px;
+        right: -46px;
+    }
+    .wechat-div span {
+        display: inline-block;
+        font-family: PingFangSC-Regular;
+        font-size: 14px;
+        color: #3E3E3E;
+        letter-spacing: 0;
+        margin-top: 20px;
+        margin-bottom: 11px;
+    }
+    .wechat {
+        width: 136px;
+        height: 136px;
+        background: #D8D8D8;
+        margin: auto auto;
+    }
+    .wechat img {
+        width: 136px;
+        height: 136px;
+    }
+   /* 微信end */
+/* 酒店标题end */
+/* 酒店图片start */
+    .hotel-picture {
+        height: 494px;
+    }
+    .hotel-picture-ul li {
+        margin-bottom: 3.4px;
+        float: right;
+    }
+    /* 左侧 */
+    .hotel-picture-left,.hotel-picture-left img {
+        width: 801px;
+        height: 494px;
+        cursor: pointer;
+    }
+    .hotel-picture-ul .hotel-picture-left {
+        margin-bottom: 0;
+        float: left;
+    }
+    /* 右侧 */
+    .hotel-picture-right {
+        width: 196px;
+        /* height: 494px; */
+    }
+    .hotel-picture-right img {
+        width: 196px;
+        height: 121px;
+        cursor: pointer;
+
+    }
+/* 酒店图片end */
+/* 中间导航栏start */
+    .middle-nav {
+        height: 40px;
+        margin-top: 23px;
+        margin-bottom: 18px;
+        background: #F1F1F1;
+        border-bottom: 1px solid #5944C3;
+    }
+    .middle-nav li,.middle-nav a {
+        height: 40px;
+        line-height: 40px;
+        width: 90px;
+        display: inline-block;
+        text-align: center;
+        font-family: PingFangSC-Regular;
+        font-size: 16px;
+        color: #3E3E3E;
+        cursor: pointer;
+    }
+    .middle-nav .middle-nav-active {
+        background: #5944C3;
+        color: #fff;
+    }
+/* 中间导航栏end */
+/* 房型预定start */
+    /* 选择时间 */
+    .room-search-div {
+        margin-top: 18px;
+        margin-bottom: 17px;
+        font-family: PingFangSC-Regular;
+        font-size: 14px;
+        color: #3E3E3E;
+    }
+    .room-search-div li {
+        display: inline-block;
+        line-height: 38px;
+    }
+    .in-room-div,.out-room-div {
+        display: inline-block;
+        width: 227px;
+        height: 36px;
+        background: #FFFFFF;
+        border: 1px solid #C0CCDA;
+        border-radius: 4px;
+        margin-left: 7px;
+        margin-right: 32px;
+        font-family: HiraginoSansGB-W6;
+        font-size: 14px;
+        color: #3E3E3E;
+        letter-spacing: 0;
+        line-height: 14px;
+        cursor: pointer;
+        background: url(../img/../img/icon_day.png) no-repeat 200px;
+    }
+    .in-room-div>span,.out-room-div>span {
+        line-height: 36px;
+    }
+    .in-room-div>.fl,.out-room-div>.fl {
+        margin-left: 12px;
+    }
+    .in-room-div>.fr,.out-room-div>.fr {
+        margin-right: 30px;
+    }
+    .in-room-li,.out-room-li {
+        position: relative;
+    }
+    .date_time {
+        position: absolute;
+    }
+    .search-btn {
+        width: 70px;
+        height: 29px;
+        color: #fff;
+        background: #5944C3;
+        border-radius: 2px;
+        margin-left: 26px;
+    }
+    /* 预定 */
+    .room-reservation-div {
+        background: #FFFFFF;
+        border: 1px solid rgba(255,255,255,0.25);
+        box-shadow: 0 0 6px 0 rgba(0,0,0,0.12), 0 6px 6px 0 rgba(0,0,0,0.12);
+    }
+    .room-reservation-title {
+        height: 38px;
+        background: rgba(89,68,195,0.15);
+        border: 1px solid rgba(255,255,255,0.25);
+        box-shadow: 0 0 6px 0 rgba(0,0,0,0.12), 0 6px 6px 0 rgba(0,0,0,0.12);
+    }
+    .room-reservation-title li {
+        display: inline-block;
+        width: 100px;
+        line-height: 38px;
+        text-align: center;
+        font-family: PingFangSC-Regular;
+        font-size: 16px;
+        color: #3E3E3E;
+        letter-spacing: 0;
+    }
+    /* 房间信息 */
+    .room-reservation-information {
+        height: 45px;
+        border-bottom: 1px solid rgba(0,0,0,0.25);
+        font-family: HiraginoSansGB-W3;
+        font-size: 14px;
+        color: #3E3E3E;
+        letter-spacing: 0;
+    }
+    .room-reservation-information:last-child {
+        border-bottom: 0px solid rgba(0,0,0,0.25);
+        
+    }
+    .room-reservation-information li {
+        display: inline-block;
+        width: 100px;
+        line-height: 45px;
+        text-align: center;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+    }
+    .room-layout {
+        font-family: HiraginoSansGB-W6;
+    }
+    .room-price span {
+        font-family: HiraginoSansGB-W6;
+        font-size: 18px;
+        color: rgba(251,67,10,1);
+        letter-spacing: 0;
+    }
+    .reserve-btn {
+        width: 70px;
+        height: 29px;
+        border-radius: 2px;
+        font-family: PingFangSC-Regular;
+        font-size: 14px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+    }
+    .abled, .have-room {
+        background: #5944C3;
+    }
+    .disabled,.no-room {
+        background: rgba(0,0,0,0.29);
+    }
+/* 房型预定end */
+/* 酒店信息start */
+    .hotel-information-div {
+        padding: 24px 14px;
+        padding-top: 0;
+        /* height: 535px; */
+        width: 982px;
+        margin-top: 22px;
+        background: #FFFFFF;
+        border: 1px solid rgba(255,255,255,0.50);
+        box-shadow: 0 0 6px 0 rgba(0,0,0,0.12), 0 6px 6px 0 rgba(0,0,0,0.12);
+    }
+    .hotel-introduce-title {
+        font-family: HiraginoSansGB-W6;
+        font-size: 16px;
+        color: #3E3E3E;
+        letter-spacing: 0;
+        line-height: 50px;
+        /* margin-bottom: 25px;
+        margin-top: 34px; */
+    }
+    .hotel-introduce-information,.hotel-introduce-content {
+        font-family: PingFangSC-Regular;
+        font-size: 14px;
+        color: #3E3E3E;
+        letter-spacing: 0;
+        line-height: 21px;
+    }
+    .hotel-introduce-content {
+        text-indent: 2em;
+        margin-top: 5px;
+    }
+    /* 酒店设施 */
+    .facility-title {
+        display: inline-block;
+        font-family: HiraginoSansGB-W6;
+        font-size: 16px;
+        color: rgba(62,62,62,0.5);
+        letter-spacing: 0;
+        margin-left: 32px;
+        width: 85px;
+        text-align: left;
+    }
+    .hotel-facility-div li,.hotel-policy-div li {
+        display: inline-block;
+        margin-left: 37px;
+        font-family: HiraginoSansGB-W3;
+        font-size: 14px;
+        color: #3E3E3E;
+        letter-spacing: 0;
+    }
+    .hotel-integrated-facility,.hotel-room-facility,.hotel-service-item,.hotel-activity-facility,
+    .in-out,.child-policy,.pet {
+        line-height: 40px;
+    }
+/* 酒店信息end */
+/* 交通位置start */
+    .traffic-position-div {
+        padding: 24px 14px;
+        padding-top: 0;
+        height: 438px;
+        width: 982px;
+        margin-top: 22px;
+        background: #FFFFFF;
+        border: 1px solid rgba(255,255,255,0.50);
+        box-shadow: 0 0 6px 0 rgba(0,0,0,0.12), 0 6px 6px 0 rgba(0,0,0,0.12);
+    }
+    .traffic-position-div>span,.user-review-title {
+        font-family: HiraginoSansGB-W6;
+        font-size: 16px;
+        color: #3E3E3E;
+        letter-spacing: 0;
+        line-height: 66px;
+    }
+    .map {
+        width: 986px;
+        height: 371px;
+    }
+/* 交通位置end */
+/* 用户评价start */
+    .user-review-div {
+        margin-top: 23px;
+        padding: 20px 14px;
+        padding-top: 0;
+        background: #FFFFFF;
+        border: 1px solid rgba(255,255,255,0.50);
+        box-shadow: 0 0 6px 0 rgba(0,0,0,0.12), 0 6px 6px 0 rgba(0,0,0,0.12);
+    }
+    .user-review-nav {
+        width: 984px;
+        height: 38px;
+        background: #F1F1F1;
+        font-family: HiraginoSansGB-W3;
+        font-size: 16px;
+        color: #3E3E3E;
+        letter-spacing: 0;
+    }
+    .user-review-nav li {
+        display: inline-block;
+        width: 72px;
+        line-height: 38px;
+        text-align: center;
+        cursor: pointer;
+    }
+    .user-review {
+        padding-top: 24px;
+        padding-bottom: 43px;
+        font-family: HiraginoSansGB-W3;
+        font-size: 14px;
+        color: #3E3E3E;
+        letter-spacing: 0;
+        border-bottom: 1px solid rgba(0,0,0,0.25);
+    }
+    .user-head-img,.user-head-img img {
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+    }
+    .user-name {
+        width: 75px;
+        text-align: center;
+        display: block;
+        margin-top: 10px;
+    }
+    .review-div {
+        /* margin-left: 30px; */
+        width: 880px;
+    }
+    .review-data {
+        margin-left: 37px;
+    }
+    .review-content {
+        margin-top: 10px;
+        line-height: 23px;
+    }
+    /* 图片 */
+    .review-pic li,.review-pic img {
+        width: 160px;
+        height: 110px;
+    }
+    .review-pic li {
+        display: inline-block;
+        margin-right: 20px;
+        margin-top: 25px;
+    }
+    .review-type-active {
+        background: #5944C3;
+        color: #fff;
+    }
+/* 用户评价end */
+footer {
+    margin-top: 21px;
+}

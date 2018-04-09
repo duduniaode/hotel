@@ -1,0 +1,126 @@
+main {
+    width: 736px;
+    margin: auto;
+    margin-top: 32px;
+}
+main>div {
+    width: 660px;
+    padding: 33px 40px 36px 35px;
+    background: #FFFFFF;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.12), 0 4px 4px 0 rgba(0,0,0,0.18);
+}
+/* 酒店信息 */
+.hotel-information {
+    margin-bottom: 16px;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.hotel-img {
+    margin-right: 25px;
+    margin-bottom: 31px;
+}
+.hotel-img img {
+    width: 204px;
+    height: 136px;
+}
+.hotel-name {
+    margin-top: 30px;
+    margin-bottom: 17px;
+    display: block;
+    font-family: HiraginoSansGB-W6;
+    font-size: 16px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+}
+.room-name {
+    display: block;
+    font-family: HiraginoSansGB-W3;
+    font-size: 16px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+}
+.hotel-price {
+    margin-top: 50px;
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+}
+.hotel-price span {
+    font-family: HiraginoSansGB-W6;
+    font-size: 20px;
+    color: #FB430A;
+    letter-spacing: 0;
+    line-height: 21px;
+}
+/* 评价 */
+.star-div img {
+    cursor: pointer;
+}
+.evaluate-div {
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+}
+.evaluate-content {
+    margin-top: 25px;
+}
+/* 评价晒单 */
+.evaluate-content span {
+    line-height: 40px;
+}
+.evaluate-content-div {
+    width: 574px;
+    font-size: 14px;
+    color: rgba(62,62,62,0.7);
+    letter-spacing: 0;
+}
+.evaluate-content textarea {
+    width: 574px;
+    height: 190px;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    text-indent: 1em;
+    padding-top: 12px;
+    margin-bottom: 10px;
+}
+.upimg {
+    height: 58px;
+    width: 58px;
+    border: 1px solid rgba(0,0,0,0.2);
+    margin-right: 15px;
+    background: url(../img/icon_photo.png) center no-repeat;
+    cursor: pointer;
+}
+.upimg input {
+    margin-left: -10000px;
+}
+.upimg-div span {
+    display: inline-block;
+    line-height: 58px;
+}
+.img-div {
+    margin-top: 10px;
+}
+.img-div img {
+    float: left;
+    width: 160px;
+    height: 110px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+/* 提交 */
+.button-div {
+    width: 736px;
+    height: 40px;
+    margin: 30px auto;
+}
+.submit-btn {
+    width: 90px;
+    height: 40px;
+    border-radius: 3px;
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+}

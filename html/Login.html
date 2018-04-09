@@ -4,82 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>登录</title>
+    <title>登录-酒店</title>
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/public.css">
     <link rel="stylesheet" href="../css/login-public.css">
     <link rel="stylesheet" href="../css/Login.css">
 </head>
 <body>
-   <main>
-       <div class="login">
-            <!-- <img src="../img/bg_sign.png" alt=""> -->
-            <div class="login-div">
-                <ul class="login-title">
-                    <li class="fl">
-                        <button class="account-login-title" style="width:225px; background:#5944c3">账号登录<span class="triangle triangle-selected"></span></button>
-                    </li>
-                    <li class="fr">
-                        <button class="code-login-title fr">短信快捷登录<span class="triangle"></span></button>
-                    </li>
-                </ul>
-                <!-- 登录内容 -->
-                <div class="login-content">
-                    <!-- 账号登录 -->
-                    <div class="account-login">
-                        <ul>
-                            <li>
-                                <input type="text" class="phone" placeholder="请输入手机号码" maxlength="11">
-                                <div class="phone-error error"></div>
-                            </li>
-                            <li>
-                                <input type="password" class="password" placeholder="请输入密码" autocomplete="off" maxlength="32">
-                                <div class="password-error error"></div>
-                            </li>
-                        </ul>    
-                        <div class="clearfix forget-div">
-                            <a href="Forget-identify.html" class="fr forget">忘记密码？</a>
-                        </div>
-                        <button class="btn-login" id="btn-login">登录</button>
-                    </div>
-                    <!-- 短信快捷登录 -->
-                    <div class="code-login" style="display:none">
-                        <ul>
-                            <li>
-                                <input type="text" class="phone" id="phone-fast" placeholder="请输入手机号码" maxlength="11">
-                                <div class="phone-error error"></div>
-                            </li>
-                            <li>
-                                <input type="text" class="graphical-input" placeholder="输入右侧图文验证码">
-                                <div class="graphical-code"></div>
-                                <div class="graphical-error error"></div>
-                            </li>
-                            <li class="clearfix">
-                                <input type="text" class="code-input fl" placeholder="输入短信验证码" maxlength="6">
-                                <button class="getcode fr">获取验证码</button>
-                                <button class="seecode fr" >查看验证码</button>
-                                <div class="code-error error fl"></div>
-                            </li>
-                            <li>
-                                <button class="btn-login" id="btn-login-fast">登录</button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- 没有账号 注册 -->
-                <div class="toreg-div">
-                    <div>
-                        <span class="fl">还没有APIS账号</span>
-                        <a href="Login.html" class="fr"><button class="toreg">注册</button></a>
-                    </div>
+    <main>
+        <div class="login-box box">
+            <div class="box-title">
+                <button class="account-login-title fl login-click">账号登录<span></span></button>
+                <button class="message-login-title fr ">短信快捷登录<span></span></button>
+            </div>
+            <!-- 账号登录 -->
+            <ul class="account-login" >
+                <li>
+                    <input type="text" class="username-input" placeholder="用户名/手机号">
+                    <div class="username-error error"></div>
+                </li>
+                <li>
+                    <input type="password" class="password-input" placeholder="请输入密码" maxlength="32">
+                    <div class="password-error error"></div>
+                </li>
+                <li class="forget-password clearfix">
+                    <a href="ForgetPassword.html" class="fr">忘记密码</a>
+                </li>
+                <li>
+                    <button class="account-login-btn" disabled="disabled">登录</button>
+                </li>
+            </ul>
+            <!-- 短信快捷登录 -->
+            <ul class="message-login" style="display:none">
+                <li>
+                    <input type="text" class="phone-input" placeholder="请输入手机号码" maxlength="11">
+                    <div class="phone-error error"></div>
+                </li>
+                <li class="clearfix">
+                    <input type="text" class="graphics-input fl" placeholder="请输入右侧图文验证码" maxlength="4">
+                    <div class="graphics-div fr"></div>
+                    <div class="graphics-error error fl"></div>
+                </li>
+                <li class="clearfix">
+                    <input type="text" class="code-input fl" placeholder="请输入短信验证码" maxlength="6">
+                    <button class="seecode-btn fl" disabled="disabled">查看验证码</button>
+                    <button class="code-btn fr" disabled="disabled">获取验证码</button>
+                    <div class="code-error error fl"></div>
+                </li>
+                <li><button class="message-login-btn" disabled="disabled">登录</button></li>
+            </ul>
+            <div class="other-div">
+                <div>
+                    <span class="fl">还没有介夫子账号吗？</span>
+                    <a href="Register.html" class="fr"><button>注册</button></a>
                 </div>
             </div>
-       </div>
-   </main>
-    
+        </div>
+    </main>
 </body>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-<script src="../js/login-common.js"></script>
 <script src="../js/url.js"></script>
+<script src="../js/login-public.js"></script>
 <script src="../js/Login.js"></script>
 </html>

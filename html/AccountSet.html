@@ -4,55 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>账户设置</title>
+    <title>账户设置-酒店</title>
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/public.css">
     <link rel="stylesheet" href="../css/other-public.css">
     <link rel="stylesheet" href="../css/AccountSet.css">
 </head>
 <body>
-    <!-- 表头start -->
+    <!-- 表头 -->
     
-    <!-- 表头end -->
-    <!-- 内容区start -->
-    <div class="content">
-        <div class="main-content">
-            <!-- 标题 -->
-            <div class="account-title">账户信息</div>
-            <!-- 内容 -->
-            <ul class="account-content">
-                <li class="upimg-li">
-                    <span class="fl">头像：</span>
-                    <label for="up-head">    
-                        <input type="file" name="" id="up-head">
-                        <div class="upimg"></div>
-                        <span class="upimg-text">上传头像</span>
-                    </label>    
-                </li>
-                <li class="username-li"><span>昵称：</span><input type="text" class="username" placeholder="请输入昵称"></li>
-                <li class="pnumber-li"><span>手机号码：</span><span class="pnumber"></span></li>
-                <li class="wechat-li">
-                    <span class="fl">微信：</span>
-                    <button class="binding">绑定</button>
-                </li>
-                <li class="password-li"><span>密码：</span><a href="Forget-identify.html"><span class="password">********</span></a></li>
-                <li><button class="btn-modify">确认修改</button></li>
-            </ul>
-        </div>
-    </div>
-    <div class="wechat-all" style="display:none">
-        <div class="wechat-div" >
+    <!-- 中心 -->
+    <main>
+        <div class="main-title">账户信息</div>
+        <ul class="account-ul">
+            <li class="clearfix headimg-li">
+                <span class="account-text fl">头像：</span>
+                <label for="file-img">
+                    <input type="file" id="file-img">
+                    <div class="img-div fl">
+                        <span>上传头像</span>
+                    </div>
+                </label>
+            </li>
+            <li class="username-li">
+                <span class="account-text">昵称：</span>
+                <input type="text" class="username">
+            </li>
+            <li>
+                <span class="account-text">手机号码：</span>
+                <span class="phone"></span>
+            </li>
+            <li class="wecaht-li">
+                <span class="account-text">微信：</span>
+                <button class="wechat-btn">绑定</button>
+            </li>
+            <li>
+                <span class="account-text">密码：</span>
+                <span>********<a href="BackPassword.html"><img src="../img/icon_edit.png" alt="" class="modify-pic"></a></span>
+            </li>
+        </ul>
+        <button class="modify">确认修改</button>
+    </main>
+    <!-- 微信绑定 -->
+    <div class="bg-div" style="display:none">
+        <div class="wechat-div">
             <span>使用微信扫描下方二维码</span>
-            <div class="wechat"><img src="" alt=""></div>
+            <div class="wechat">
+                <img src="" alt="">
+            </div>
         </div>
     </div>
-    <!-- 内容区end -->
-    <!-- 脚注start -->
-   
-    <!-- 脚注end -->
+    <!-- 表尾 -->
+    
 </body>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="../js/url.js"></script>
-<script src="../js/other-common.js"></script>
+<script src="../js/other-public.js"></script>
 <script src="../js/AccountSet.js"></script>
 </html>

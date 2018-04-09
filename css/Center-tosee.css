@@ -1,0 +1,96 @@
+
+main {
+    width: 696px;
+    /* height: 640px; */
+    background: #FFFFFF;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.12), 0 4px 4px 0 rgba(0,0,0,0.18);
+    margin: auto auto;
+    margin-top: 33px; 
+    font-family: HiraginoSansGB-W3;
+    font-size: 14px;
+    color: #3E3E3E;
+    letter-spacing: 0;
+}
+/* 导航start */
+    .order-nav {
+        height: 56px;
+        line-height: 56px;
+        background: rgba(89,68,195,0.15);
+        font-family: HiraginoSansGB-W3;
+        font-size: 18px;
+        color: #3E3E3E;
+        letter-spacing: 0;
+    }
+    .order-state {
+        margin-left: 33px;
+        margin-right: 141px;
+    }
+    .order-price1 {
+        margin-right: 54px;
+    }
+/* 导航end */
+    dt {
+        font-size: 18px;
+        margin: 23px auto;
+        margin-left: 33px;
+    }
+    dd {
+        font-size: 14px;
+        margin-left: 61px;
+    }
+/* 订单信息 */
+    .order-information,.intotel-information {
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+    }
+    .order-information dd {
+        margin-bottom: 22px;
+    }
+    .in-time {
+        margin-left: 46px;
+    }
+/* 入住信息 */
+.phone {
+    margin-top: 16px;
+    margin-bottom: 23px;
+}
+.star img {
+    width: 18px;
+    height: 17px;
+}
+.evaluate {
+    padding-bottom: 15px;
+}
+.evaluate-content {
+    margin-right: 22px;
+    line-height: 20px;
+    margin-top: 16px;
+    padding-bottom: 15px;
+}
+.evaluate-pic img {
+    width: 160px;
+    height: 110px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
+.no-evaluate {
+    font-size: 20px;
+    color: #666;
+    width: 696px;
+    text-align: center;
+    line-height: 60px;
+}
+.toevaluate {
+    color: #5944C3;
+    font-size: 16px;
+    cursor: pointer;
+}
+/* 完成订单 */
+.complete-div {
+    padding: 40px;
+    text-align: center;
+}
+.tocomplete {
+    cursor: pointer;
+    font-size: 20px;
+    color: #5944C3;
+}

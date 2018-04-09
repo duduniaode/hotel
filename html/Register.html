@@ -4,57 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>注册-酒店项目</title>
+    <title>注册-酒店</title>
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/public.css">
     <link rel="stylesheet" href="../css/login-public.css">
     <link rel="stylesheet" href="../css/Register.css">
 </head>
 <body>
-  
-   <main>
-        <div class="register">
-            <div class="title">注册APIS账号</div>
+    <!-- 表头start -->
+    
+    <!-- 表头end -->
+    <!-- 主体部分start -->
+    <main>
+        <div class="register-box box">
+            <span class="box-title">注册APIS项目</span>
             <ul>
                 <li>
-                    <input type="text" class="phone" placeholder="请输入手机号码" maxlength="11">
-                    <div class="phone-error error"></div>
-                </li>
-                <li>
-                    <input type="text" class="graphical-input" placeholder="输入右侧图文验证码">
-                    <div class="graphical-code"></div>
-                    <div class="graphical-error error"></div>
+                    <input type="" class="phone-input" placeholder="请输入手机号码" maxlength="11">
+                    <div class="error phone-error"></div>
                 </li>
                 <li class="clearfix">
-                    <input type="text" class="code-input fl" placeholder="输入短信验证码" maxlength="6">
-                    <button class="getcode fr">获取验证码</button>
-                    <button class="seecode fr" >查看验证码</button>
-                    <div class="code-error error fl"></div>
+                    <input type="text" class="graphics-input fl" placeholder="请输入右侧图文验证码" maxlength="4">
+                    <div class="graphics-div fr"></div>
+                    <div class="error fl graphics-error"></div>
+                </li>
+                <li class="clearfix">
+                    <input type="text" class="code-input fl" placeholder="请输入短信验证码" maxlength="6">
+                    <button class="seecode-btn fl" disabled="disabled">查看验证码</button>
+                    <button class="code-btn fr" disabled="disabled">获取验证码</button>
+                    <div class="error fl code-error"></div>
                 </li>
                 <li>
-                    <input type="password" class="password" placeholder="输入6~32位密码" autocomplete="off" maxlength="32">
-                    <div class="password-error error"></div>
+                    <input type="text" class="password-input" placeholder="请输入6-32位密码" maxlength="32">
+                    <div class="error password-error"></div>
                 </li>
                 <li>
-                    <input type="password" class="repassword" placeholder="请重复密码" autocomplete="off" maxlength="32">
-                    <div class="repassword-error error"></div>
+                    <input type="text" class="repassword-input" placeholder="请重复输入密码" maxlength="32">
+                    <div class="error repassword-error"></div>
                 </li>
                 <li>
-                    <button class="btn-register">注册</button>
+                    <button class="register-btn" disabled="disabled">注册</button>
                 </li>
             </ul>
-            <div class="tologin-div">
-               <div>
+            <div class="other-div">
+                <div>
                     <span class="fl">已有APIS账号</span>
-                     <a href="Login.html" class="fr"><button class="tologin">登录</button></a>
-               </div>
-            </div>   
+                    <a href="Login.html" class="fr"><button>登录</button></a>
+                </div>
+            </div>
         </div>
-   </main>
-  
+    </main>
+    <!-- 主体部分end -->
+    <!-- 表尾start -->
+    
+    <!-- 表尾end -->
 </body>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-<script src="../js/login-common.js"></script>
 <script src="../js/url.js"></script>
+<script src="../js/login-public.js"></script>
 <script src="../js/Register.js"></script>
 </html>

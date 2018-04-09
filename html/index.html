@@ -4,76 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>首页</title>
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/public.css">
-    <link rel="stylesheet" href="../css/other-public.css">
-    <link rel="stylesheet" href="../css/index.css">
+    <title>首页-酒店</title>
 </head>
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/public.css">
+<link rel="stylesheet" href="../css/other-public.css">
+<link rel="stylesheet" href="../css/index.css">
 <body>
-    <main>
-        <!-- 上部分 -->
-        <div class="main-top">
-            <ul class="select-ul">
-                <!-- 城市 -->
-                <li class="select-city fl">
-                    <input type="text" placeholder="请选择城市" class="city_input">
-                    <div class="select-city-div" style="display:none">
-                        <!-- 城市类型标题 -->
-                        <ul class="select-city-div-title">
-                        </ul>
-                        <!-- 城市类型内容 -->
-                        <!-- <ul class="select-city-div-content">
-                        </ul> -->
-                    </div>
-                </li>
-                <!-- 时间 -->
-                <li class="select-datatime "><input type="text" placeholder="请选择日期"></li>
-                <!-- 关键字 -->
-                <li class="select-keyword fr"><input type="text" placeholder="酒店名称/位置/关键字"></li>
-            </ul>
-            <div class="button-div">
-                <button class="search-btn">搜索</button>
-            </div>
-        </div>
-        <!-- 下部分 -->
-        <div class="main-bottom">
-            <div class="main-bottom-content">
-                <!-- 热门酒店导航栏 -->
-                <ul class="hot-hotel-city">
-                    <span class="hot-hotel-title">热门酒店</span>
-                    <!-- <li class="hot-hotel-title">热门酒店</li> -->
-                    <!-- <li>西安<span class="hot-hotel-title-sharp sharp-active"></span></li>
-                    <li>北京<span class="hot-hotel-title-sharp"></span></li>
-                    <li>上海<span class="hot-hotel-title-sharp"></span></li>
-                    <li>广州</li>
-                    <li>深圳</li>
-                    <li>杭州</li>
-                    <li>厦门</li>
-                    <li>三亚</li>
-                    <li>天津</li>
-                    <li>成都</li> -->
-                </ul>
-                <!-- 热门酒店 -->
-                <ul class="hotel-line">
-                        <!-- <div class="hotel-error"><img src="../img/abc.png">暂无酒店数据</div> -->
-                    <li>
-                        <a href="HotelDetails.html">
-                            <img src="../img/jq1.jpg" alt="">
-                            <div class="hotel-information clearfix">
-                                <span class="">西安开元名都大酒店</span>
-                                <span class="fr">豪华型</span>
-                                <div class="hotel-price">¥488</div>
+    <!-- 上部分 -->
+    <div class="main-top">
+        <ul class="select-ul">
+            <!-- 城市 -->
+            <li class="select-city fl">
+                <input type="text" placeholder="请选择城市" class="city_input">
+                <div class="select-city-div" style="display:none">
+                    <!-- 城市类型标题 -->
+                    <ul class="select-city-div-title">
+                    </ul>
+                    <!-- 城市类型内容 -->
+                    <!-- <ul class="select-city-div-content">
+                    </ul> -->
+                </div>
+            </li>
+            <!-- 时间 -->
+            <li class="select-datatime ">
+                <input type="text" placeholder="请选择日期" class="time_input">
+                <div class="date_time clearfix"  style="display:none">
+                    <div class="now_month_div">
+                        <!-- 年月 -->
+                        <div class="header">
+                            <button class="last_year"></button>
+                            <button class="last_month"></button>
+                            <div class="years">
+                                <span class="year"></span>年&nbsp;<span class="month"></span>月
                             </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                        </div>
+                        <div class="week">
+                            <ul>
+                                <li>日</li>
+                                <li>一</li>
+                                <li>二</li>
+                                <li>三</li>
+                                <li>四</li>
+                                <li>五</li>
+                                <li>六</li>
+                            </ul>
+                        </div>
+                        <div class="day">
+                            <ul>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="next_month_div">
+                        <div class="header">
+                            <button class="next_year"></button>
+                            <button class="next_month"></button>
+                            <div class="years">
+                                <span class="year"></span>年&nbsp;<span class="month"></span>月
+                            </div>
+                        </div>
+                        <div class="week">
+                            <ul>
+                                <li>日</li>
+                                <li>一</li>
+                                <li>二</li>
+                                <li>三</li>
+                                <li>四</li>
+                                <li>五</li>
+                                <li>六</li>
+                            </ul>
+                        </div>
+                        <div class="day">
+                            <ul>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!-- 关键字 -->
+            <li class="select-keyword fr"><input type="text" placeholder="酒店名称/位置/关键字" class="hotelKeyword"></li>
+        </ul>
+        <div class="button-div">
+            <button class="search-btn"><img src="../img/icon_search.png" alt="">搜索</button>
         </div>
-    </main>
+    </div>
+    <!-- 下部分 -->
+    <div class="main-bottom">
+        <div class="main-bottom-content">
+            <!-- 热门酒店导航栏 -->
+            <ul class="hot-hotel-city">
+                <span class="hot-hotel-title">热门酒店</span>
+                <!-- <li class="hot-hotel-title">热门酒店</li> -->
+                <!-- <li>西安<span class="hot-hotel-title-sharp sharp-active"></span></li>
+                <li>北京<span class="hot-hotel-title-sharp"></span></li>
+                <li>上海<span class="hot-hotel-title-sharp"></span></li>
+                <li>广州</li>
+                <li>深圳</li>
+                <li>杭州</li>
+                <li>厦门</li>
+                <li>三亚</li>
+                <li>天津</li>
+                <li>成都</li> -->
+            </ul>
+            <!-- 热门酒店 -->
+            <ul class="hotel-line">
+                    <!-- <div class="hotel-error"><img src="../img/abc.png">暂无酒店数据</div> -->
+                <!-- <li>
+                    <a href="HotelDetails.html">
+                        <img src="../img/jq1.jpg" alt="">
+                        <div class="hotel-information clearfix">
+                            <span class="">西安开元名都大酒店</span>
+                            <span class="fr">豪华型</span>
+                            <div class="hotel-price">¥488</div>
+                        </div>
+                    </a>
+                </li> -->
+            </ul>
+        </div>
+    </div>
 </body>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="../js/url.js"></script>
-<script src="../js/other-common.js"></script>
+<script src="../js/other-public.js"></script>
 <script src="../js/index.js"></script>
 </html>

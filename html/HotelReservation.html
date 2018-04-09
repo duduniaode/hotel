@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>预定-酒店</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/other-public.css">
+    <!-- <link rel="stylesheet" href="../css/index.css"> -->
+    <link rel="stylesheet" href="../css/HotelReservation.css">
+</head>
+<body>
+    <main>
+        <!-- 左侧 -->
+        <div class="left-div fl">
+            
+        </div>
+        <!-- 右侧 -->
+        <div class="right-div fr">
+            <!-- 预定信息 -->
+            <div class="reservation-information-div">
+                <span class="reservation-title">预定信息</span>
+                <ul class="reservation-content">
+                    <li class="room-type">房型名称：&nbsp;<span></span></li>
+                    <li class="in-out-time clearfix">
+                        <div class="fl">入住时间：&nbsp;</div>
+                        <ul class="fl">
+                            <li class="in-room-li fl">
+                                <div class="in-room-div time_input">
+                                    <span class="fl"></span>
+                                    <!-- <span class="fr">星期四</span> -->
+                                </div>
+                                <!-- <input type="text" class="in-room-input"> -->
+                                <div class="date_time clearfix" style="display:none" >
+                                    <div class="now_month_div">
+                                        <!-- 年月 -->
+                                        <div class="header">
+                                            <button class="last_year"></button>
+                                            <button class="last_month"></button>
+                                            <div class="years">
+                                                <span class="year"></span>年&nbsp;<span class="month"></span>月
+                                            </div>
+                                        </div>
+                                        <div class="week">
+                                            <ul>
+                                                <li>日</li>
+                                                <li>一</li>
+                                                <li>二</li>
+                                                <li>三</li>
+                                                <li>四</li>
+                                                <li>五</li>
+                                                <li>六</li>
+                                            </ul>
+                                        </div>
+                                        <div class="day">
+                                            <ul>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="next_month_div">
+                                        <div class="header">
+                                            <button class="next_year"></button>
+                                            <button class="next_month"></button>
+                                            <div class="years">
+                                                <span class="year"></span>年&nbsp;<span class="month"></span>月
+                                            </div>
+                                        </div>
+                                        <div class="week">
+                                            <ul>
+                                                <li>日</li>
+                                                <li>一</li>
+                                                <li>二</li>
+                                                <li>三</li>
+                                                <li>四</li>
+                                                <li>五</li>
+                                                <li>六</li>
+                                            </ul>
+                                        </div>
+                                        <div class="day">
+                                            <ul>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="fl">
+                                至&nbsp;
+                            </li>
+                            <li class="out-room-li fl">
+                                <div class="out-room-div">
+                                    <span class="fl"></span>
+                                    <!-- <span class="fr">星期四</span> -->
+                                </div>
+                                <!-- <input type="text" class="out-room-input"> -->
+                                <div class="date_time clearfix" style="display:none" >
+                                    <div class="now_month_div">
+                                        <!-- 年月 -->
+                                        <div class="header">
+                                            <button class="last_year"></button>
+                                            <button class="last_month"></button>
+                                            <div class="years">
+                                                <span class="year"></span>年&nbsp;<span class="month"></span>月
+                                            </div>
+                                        </div>
+                                        <div class="week">
+                                            <ul>
+                                                <li>日</li>
+                                                <li>一</li>
+                                                <li>二</li>
+                                                <li>三</li>
+                                                <li>四</li>
+                                                <li>五</li>
+                                                <li>六</li>
+                                            </ul>
+                                        </div>
+                                        <div class="day">
+                                            <ul>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="next_month_div">
+                                        <div class="header">
+                                            <button class="next_year"></button>
+                                            <button class="next_month"></button>
+                                            <div class="years">
+                                                <span class="year"></span>年&nbsp;<span class="month"></span>月
+                                            </div>
+                                        </div>
+                                        <div class="week">
+                                            <ul>
+                                                <li>日</li>
+                                                <li>一</li>
+                                                <li>二</li>
+                                                <li>三</li>
+                                                <li>四</li>
+                                                <li>五</li>
+                                                <li>六</li>
+                                            </ul>
+                                        </div>
+                                        <div class="day">
+                                            <ul>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="room-num clearfix">
+                        <div class="fl">房间数量：&nbsp;</div>
+                        <div class="room-num-select-div fl" contenteditable="true">
+                            <input class="num fl">
+                            <button class="num-add fr num-no">+</button>
+                            <button class="num-sub fr num-no">-</button>
+                        </div>
+                        <div class="fl error" style="display:none">没有更多房间</div>
+                    </li>
+                    <li class="room-price-all">房费总计：&nbsp;￥<span></span></li>
+                </ul>
+            </div>
+            <!-- 入住信息 -->
+            <div class="inHotel-information">
+                <div class="inHotel-title">入住信息</div>
+                <ul class="username clearfix">
+                    <!-- 星号 -->
+                    <li class="asterisk fl">*</li> 
+                    <li class="username-title fl">客人姓名：&nbsp;&nbsp;</li>
+                    <li class="username-input fl"><input type="text" placeholder="只需填写一位"></li>
+                    <li class="username-remind fl"></li>
+                </ul>
+                <ul class="phone clearfix">
+                    <li class="asterisk fl">*</li> 
+                    <li class="phone-title fl">联系电话：&nbsp;&nbsp;</li>
+                    <li class="phone-input fl"><input type="text" maxlength="11"></li>
+                    <li class="phone-remind fl"></li>
+                </ul>
+            </div>
+            <!-- 提交订单 -->
+            <div class="submit-order-div clearfix">
+                <div class="message clearfix">
+                    <div class="fl">
+                        如需发票，请向酒店前台索取.
+                    </div>
+                    <div class="fr">
+                        需支付：￥<span class="price">788</span>
+                    </div>
+                </div>
+                <button class="submit-btn fr" disabled="disabled">提交订单</button>
+            </div>
+        </div>
+    </main>
+</body>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/url.js"></script>
+    <script src="../js/other-public.js"></script>
+    <script src="../js/HotelReservation.js"></script>
+</html>

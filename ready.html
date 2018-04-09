@@ -1,177 +1,7 @@
-1.ajax的使用:
-    $.ajax("http://这里是你的请求地址/v1/img/captcha", {
-        <!-- // get请求 -->
-        method: "get", 
-        <!-- // 当服务器发来html元素时，需要如此设置，使ajax进行html解析 -->
-        dataType: 'html', 
-        <!-- dataType: "json", // 希望服务器返回json格式数据，并使ajax进行json解析 -->
-        <!--  允许跨域名储存和访问cookie -->
-        xhrFields: {
-        withCredentials: true // 允许跨域名储存和访问cookie
-        }
-    })
-    <!-- // 处理ajax成功的回调 -->
-    .done(function (data) { // 处理ajax成功的回调
-        <!-- // 将获取到的html元素插入 -->
-        $('#captcha').html(data) 
-    })
-    }
-2.储存数据和填充数据
-    $('.avatar').attr('src', avatar)
-    // 用户名填充
-    $('span').text(localStorage.name)
-3.使用form表单初始化FormData对象方式上传文件
-    <!-- 上传后，服务器端代码需要使用从查询参数名为img获取文件输入流对象，
-        因为<input>中声明的是name="img"。 -->
-    <!-- <form>标签添加enctype="multipart/form-data"属性。 -->
-    <form id="uploadForm" enctype="multipart/form-data">
-        <input id="file" type="file" name="img"/>
-        <button id="upload" type="button">upload</button>
-    </form>
-    $.ajax({
-        url: '/upload',
-        type: 'POST',
-        <!-- cache设置为false，上传文件不需要缓存。 -->
-        cache: false,
-        data: new FormData($('#uploadForm')[0]),
-        <!-- processData设置为false。因为data值是FormData对象，不需要对数据做处理。 -->
-        processData: false,
-        <!-- contentType设置为false。因为是由<form>表单构造的FormData对象，
-            且已经声明了属性enctype="multipart/form-data"，所以这里设置为false。 -->
-        contentType: false
-    }).done(function(res) {
-    }).fail(function(res) {})
-4.使用FormData对象添加字段方式上传文件
-    <div id="uploadForm">
-        <input id="file" type="file"/>
-        <button id="upload" type="button">upload</button>
-    </div>
-    var formData = new FormData();
-    <!-- append()的第二个参数应是文件对象，即$('#file')[0].files[0]。 -->
-    formData.append('img', $('#file')[0].files[0]);
-    $.ajax({
-        url: '/upload',
-        type: 'POST',
-        cache: false,
-        data: formData,
-        processData: false,
-        <!-- contentType也要设置为false。 -->
-        contentType: false
-    }).done(function(res) {
-    }).fail(function(res) {})
-    <!-- 从代码$('#file')[0].files[0]中可以看到一个<input type="file">标签
-        能够上传多个文件，只需要在<input type="file">
-        里添加multiple或multiple="multiple"属性。 -->
-<!-- 5.事件绑定 $(selector).on(events[,selector][,data],handler); -->
-        <!-- 注意selector不能是是动态一部添加的 -->
-    // 第一个参数：events，绑定事件的名称可以是由空格分隔的多个事件（标准事件或者自定义事件）
-    // 第二个参数：selector, 执行事件的后代元素
-    // 第三个参数：data，传递给处理函数的数据，事件触发的时候通过event.data来使用
-    // 第四个参数：handler，事件处理函数
-    // 表示给$(selector)绑定事件，当必须是它的内部元素span才能执行这个事件
-    $(selector).on( "click",“span”, function() {});
-    
-    // 绑定多个事件
-    // 表示给$(selector)匹配的元素绑定单击和鼠标进入事件
-    $(selector).on(“click mouseenter”, function(){});
-6.块级元素可用text-align:center居中
-*********页面跳转window.location.href="你所要跳转的页面";必须用button type="button" 
-     window.open('WriteArticle.html');不用
-7.jq:     
-    $(selector).css(“color”, “red”);
-    $(selector).css({“color”: “red”, “font-size”: “30px”});
-    $(selector).addClass(“liItem”);
-    $(selector).removeClass(“liItem”);
-    $(selector).removeClass(); 不指定参数，表示移除被选中元素的所有类
-    <!-- img -->
-    $(".nav-head").attr("src",img_url + user_data.avatar);
-    <!-- 第4n个li设置 -->
-    .hotel-line1>li:nth-child(4n) {
-        margin-right: 0;
-    }
-    <!-- 在元素的最后一个子元素后面追加元素： -->
-    append()（重点）
-    <!-- // “自杀” 把自己（包括所有内部元素）从文档中删除掉 -->
-    $(selector).remove();
-    <!-- // 参数为：要移除的属性的名称 -->
-    $(selector).removeAttr(“title”); 
-    <!-- 参数为：要获取的属性的名称，该操作会返回指定属性对应的值 -->
-    $(selector).attr(“title”);
-8.JavaScript indexOf() 方法 
-    indexOf() 方法可返回某个指定的字符串值在字符串中首次出现的位置。
-    stringObject.indexOf(searchvalue,fromindex)
-        searchvalue	必需。规定需检索的字符串值。
-        fromindex	可选的整数参数。规定在字符串中开始检索的位置。
-            它的合法取值是 0 到 stringObject.length - 1。如省略该参数，则将从字符串的首字符开始检索。
-    该方法将从头到尾地检索字符串 stringObject，看它是否含有子串 searchvalue。
-        开始检索的位置在字符串的 fromindex 处或字符串的开头（没有指定 fromindex 时）。
-        如果找到一个 searchvalue，则返回 searchvalue 的第一次出现的位置。stringObject 中的字符位置是从 0 开始的。
-    提示和注释
-        注释：indexOf() 方法对大小写敏感！
-        注释：如果要检索的字符串值没有出现，则该方法返回 -1。
-9.JavaScript push() 方法
-    push() 方法可向数组的末尾添加一个或多个元素，并返回新的长度。  
-10.单行文本超出省略号
-        overflow: hidden;
-        text-overflow:ellipsis;
-        white-space: nowrap;
-    多行文本溢出显示省略号:
-        <!-- display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 3;
-        overflow: hidden; -->
-        -webkit-line-clamp用来限制在一个块元素显示的文本的行数。 为了实现该效果，它需要组合其他的WebKit属性。常见结合属性：
-        display: -webkit-box; 必须结合的属性 ，将对象作为弹性伸缩盒子模型显示 。
-        -webkit-box-orient 必须结合的属性 ，设置或检索伸缩盒对象的子元素的排列方式 。
-
-
-
-
-
-
-
-
-微信绑定 背景变色：
-    1.一个大的div1长宽整个页面的长宽 绝对定位 占据整个窗口 有个背景颜色 开始隐藏
-    2.包含一个小的div2 里面放二维码
-    3.点击绑定按钮，div1显示（div1就是整个页面） 点击任意地方 隐藏
-
-
-
-
-
-登录公共部分：login-public.css
-    页头  页尾
-
-公共部分：other-public.css
-    1.页头：header
-        左侧：APIS|酒店项目
-        右侧：
-            登录 注册    ；  
-            头像图片 姓名 下三角（我的订单 账户设置 退出登录） 我的订单
-    2.页脚:footer
-
-<!-- 注册->登录(忘记密码)->密码找回     -->
-1.公共样式：login-public.css
-    头部 底部 
-登录：
-    1.两个button 点击谁谁的背景颜色变为#5944C3 下方小三角出现 宽度变为225
-头部:header
-中心部分：main
-底部：footer
-
-注册：Register.html
-登录：账号登录 短信快捷登录 :Login.html     
-忘记密码、修改密码：验证身份 重置密码 ForgetPassword.html
-
-<!-- 账户设置->绑定微信 -->
-账户设置：AccountSet.html
-<!-- 绑定微信：BindingWeChat.html -->
-
-
+0414之前项目完成：
 <!-- 首页/筛选->酒店详情->预定（->支付）->个人中心->查看/支付/取消预定/去评价 -->
-首页（选城市 选时间）：index.html    main-top>header+ul>li*3  
-筛选（行政区、商圈、地铁站、车站、景点）：Filter.html    
+<!-- 首页（选城市 选时间）：index.html    main-top>header+ul>li*3   -->
+筛选（行政区、商圈、地铁站、车站、景点）：HotelFilter.html    
 酒店详情：HotelDetails.html
 预定：HotelReservation.html
 支付：Payment.html
@@ -180,78 +10,564 @@
 查看：（订单状态。。。）SeeInformation.html
 取消预定：CancelReservation.html
 
+<!-- 0322~0323：筛选页面结束 -->
+    0322：非地图部分结束 
+    0323：地图部分结束
+0325~0327：酒店详情页面结束
+    0325：静态页面完成 上半部分结束 房型预定 酒店信息结束
+    0326：中间部分完成 酒店介绍 地图完成
+    0327：用户完成 分页
+0328：预定、支付完成
+0329~0330：个人中心完成
 
-1.使用 .done() ， .fail() ， .always() 来代替传统回调
-<!-- jqXHR.fail(function(jqXHR, textStatus, errorThrown) {});
-一种可供选择的请求失败时调用的回调选项构造函数，.fail()方法取代了的过时的.error()方法。 -->
-<!-- jqXHR.done(function(data, textStatus, jqXHR) {});
-一种可供选择的请求成功时调用的回调选项构造函数，.done()方法取代了过时的.success()方法。 -->
-<!-- jqXHR.always(function(data|jqXHR, textStatus, jqXHR|errorThrown) { });
-一种可供选择的请求结束时调用的回调选项构造函数，.always()方法代替了过时的.complete()方法, -->
-<!-- 当请求成功时，该函数的参数与.done()的参数一致；当请求失败时，该函数的参数与.fail()的参数一致。 -->
 
 
 
-animate可以改变上下左右的宽高 
-    <!-- // $(selector).animate(styles,options)
-        // styles 必需。规定产生动画效果的 CSS 样式和值（同上）。
-        //options 可选。规定动画的额外选项。
-            可能的值：
-            speed - 设置动画的速度
-            easing - 规定要使用的 easing 函数
-            callback - 规定动画完成之后要执行的函数
-            step - 规定动画的每一步完成之后要执行的函数
-            queue - 布尔值。指示是否在效果队列中放置动画。如果为 false，则动画将立即开始
-            specialEasing - 来自 styles 参数的一个或多个 CSS 属性的映射，以及它们的对应 easing 函数 -->
-    6.border-raduis:50%~100%都是圆
-    7.setInterval
-    <!-- setInterval() 方法可按照指定的周期（以毫秒计）来调用函数或计算表达式。
-        setInterval() 方法会不停地调用函数，直到 clearInterval() 被调用或窗口被关闭。由 setInterval() 返回的 ID 值可用作 clearInterval() 方法的参数。
-        提示： 1000 毫秒= 1 秒。
-        提示： 如果你只想执行一次可以使用 setTimeout() 方法。
-     -->
-     1.用display显示时，点击显示闪一下就不见了：
-     用了a标签，需要去除超链接的默认行为
-         去除不了 换个方式 不用a标签                                         
-dataset属性存取data-*自定义属性的值:
-    这种方式通过访问一个元素的 dataset 属性来存取 data-* 自定义属性的值。
-    这个 dataset 属性是HTML5 JavaScript API的一部分，用来返回一个所有选择元素 data- 属性的DOMStringMap对象。
 
-    使用这种方法时，不是使用完整的属性名，如 data-uid 来存取数据，应该去掉data- 前缀。
+<!-- 笔记start -->
+    1.ajax的使用:
+        $.ajax("http://这里是你的请求地址/v1/img/captcha", {
+            <!-- // get请求 -->
+            method: "get", 
+            <!-- // 当服务器发来html元素时，需要如此设置，使ajax进行html解析 -->
+            dataType: 'html', 
+            <!-- dataType: "json", // 希望服务器返回json格式数据，并使ajax进行json解析 -->
+            <!--  允许跨域名储存和访问cookie -->
+            xhrFields: {
+            withCredentials: true // 允许跨域名储存和访问cookie
+            }
+        })
+        <!-- // 处理ajax成功的回调 -->
+        .done(function (data) { // 处理ajax成功的回调
+            <!-- // 将获取到的html元素插入 -->
+            $('#captcha').html(data) 
+        })
+        }
+    2.储存数据和填充数据
+        $('.avatar').attr('src', avatar)
+        // 用户名填充
+        $('span').text(localStorage.name)
+    3.使用form表单初始化FormData对象方式上传文件
+        <!-- 上传后，服务器端代码需要使用从查询参数名为img获取文件输入流对象，
+            因为<input>中声明的是name="img"。 -->
+        <!-- <form>标签添加enctype="multipart/form-data"属性。 -->
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input id="file" type="file" name="img"/>
+            <button id="upload" type="button">upload</button>
+        </form>
+        $.ajax({
+            url: '/upload',
+            type: 'POST',
+            <!-- cache设置为false，上传文件不需要缓存。 -->
+            cache: false,
+            data: new FormData($('#uploadForm')[0]),
+            <!-- processData设置为false。因为data值'是FormData对象，不需要对数据做处理。 -->
+            processData: false,
+            <!-- contentType设置为false。因为是由<form>表单构造的FormData对象，
+                且已经声明了属性enctype="multipart/form-data"，所以这里设置为false。 -->
+            contentType: false
+        }).done(function(res) {
+        }).fail(function(res) {})
+    4.使用FormData对象添加字段方式上传文件
+        <div id="uploadForm">
+            <input id="file" type="file"/>
+            <button id="upload" type="button">upload</button>
+        </div>
+        var formData = new FormData();
+        <!-- append()的第二个参数应是文件对象，即$('#file')[0].files[0]。 -->
+        formData.append('img', $('#file')[0].files[0]);
+        $.ajax({
+            url: '/upload',
+            type: 'POST',
+            cache: false,
+            data: formData,
+            processData: false,
+            <!-- contentType也要设置为false。 -->
+            contentType: false
+        }).done(function(res) {
+        }).fail(function(res) {})
+        <!-- 从代码$('#file')[0].files[0]中可以看到一个<input type="file">标签
+            能够上传多个文件，只需要在<input type="file">
+            里添加multiple或multiple="multiple"属性。 -->
+    <!-- 5.事件绑定 $(selector).on(events[,selector][,data],handler); -->
+            <!-- 注意selector不能是是动态一部添加的 -->
+        // 第一个参数：events，绑定事件的名称可以是由空格分隔的多个事件（标准事件或者自定义事件）
+        // 第二个参数：selector, 执行事件的后代元素
+        // 第三个参数：data，传递给处理函数的数据，事件触发的时候通过event.data来使用
+        // 第四个参数：handler，事件处理函数
+        // 表示给$(selector)绑定事件，当必须是它的内部元素span才能执行这个事件
+        $(selector).on( "click",“span”, function() {});
+        
+        // 绑定多个事件
+        // 表示给$(selector)匹配的元素绑定单击和鼠标进入事件
+        $(selector).on(“click mouseenter”, function(){});
+    6.块级元素可用text-align:center居中
+    *********页面跳转window.location.href="你所要跳转的页面";必须用button type="button" 
+        window.open('WriteArticle.html');不用
+    7.jq:     
+        $(selector).css(“color”, “red”);
+        $(selector).css({“color”: “red”, “font-size”: “30px”});
+        添加类名
+        $(this).addClass("area-active");
+        // this.className = "area-active";
+        $(selector).addClass(“liItem”);
+        $(selector).removeClass(“liItem”);
+        $(selector).removeClass(); 不指定参数，表示移除被选中元素的所有类
+        <!-- img -->
+        $(".nav-head").attr("src",img_url + user_data.avatar);
+        <!-- 第4n个li设置 -->
+        .hotel-line1>li:nth-child(4n) {
+            margin-right: 0;
+        }
+        <!-- Jquery 的nth-child 选择器用来选择其父标签的第n个child 标签。
+            其索引是从1 开始的即n是从1开始，而非从0开始。 -->
+        <!-- 在元素的最后一个子元素后面追加元素： -->
+        append()（重点）
+        <!-- // “自杀” 把自己（包括所有内部元素）从文档中删除掉 -->
+        $(selector).remove();
+        <!-- // 参数为：要移除的属性的名称 -->
+        $(selector).removeAttr(“title”); 
+        <!-- 参数为：要获取的属性的名称，该操作会返回指定属性对应的值 -->
+        $(selector).attr(“title”);
+    8.JavaScript indexOf() 方法 
+        indexOf() 方法可返回某个指定的字符串值在字符串中首次出现的位置。
+        stringObject.indexOf(searchvalue,fromindex)
+            searchvalue	必需。规定需检索的字符串值。
+            fromindex	可选的整数参数。规定在字符串中开始检索的位置。
+                它的合法取值是 0 到 stringObject.length - 1。如省略该参数，则将从字符串的首字符开始检索。
+        该方法将从头到尾地检索字符串 stringObject，看它是否含有子串 searchvalue。
+            开始检索的位置在字符串的 fromindex 处或字符串的开头（没有指定 fromindex 时）。
+            如果找到一个 searchvalue，则返回 searchvalue 的第一次出现的位置。stringObject 中的字符位置是从 0 开始的。
+        提示和注释
+            注释：indexOf() 方法对大小写敏感！
+            注释：如果要检索的字符串值没有出现，则该方法返回 -1。
+    9.JavaScript push() 方法
+        push() 方法可向数组的末尾添加一个或多个元素，并返回新的长度。  
+    10.单行文本超出省略号
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+        多行文本溢出显示省略号:
+            <!-- display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden; -->
+            -webkit-line-clamp用来限制在一个块元素显示的文本的行数。 为了实现该效果，它需要组合其他的WebKit属性。常见结合属性：
+            display: -webkit-box; 必须结合的属性 ，将对象作为弹性伸缩盒子模型显示 。
+            -webkit-box-orient 必须结合的属性 ，设置或检索伸缩盒对象的子元素的排列方式 。
+    11.HTML <input> 标签的 readonly 属性
+        readonly 属性规定输入字段为只读。
+        只读字段是不能修改的。不过，用户仍然可以使用 tab 键切换到该字段，还可以选中或拷贝其文本。
+        readonly 属性可以防止用户对值进行修改，直到满足某些条件为止（比如选中了一个复选框）。然后，需要使用 JavaScript 消除 readonly 值，将输入字段切换到可编辑状态。
+        readonly 属性可与 <input type="text"> 或 <input type="password"> 配合使用。
+    12.jQuery设置disabled属性与移除disabled属性
+        Readonly只针对input和textarea有效，而disabled对于所有的表单元素 包括select,radio, checkbox, button等都有效。
+        //两种方法设置disabled属性
+            $('#areaSelect').attr("disabled",true);
+            $('#areaSelect').attr("disabled","disabled");
+        //三种方法移除disabled属性
+            $('#areaSelect').attr("disabled",false);
+            $('#areaSelect').removeAttr("disabled");
+            $('#areaSelect').attr("disabled","");
+    13.div上下左右居中：
+        .box {
+            background: #fff;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    14.判断div中内容是否为空：
+        $(".phone-error").html()==""
+    15.change和onchange、click和onclick的区别：
+        onchange和onclick都是js方法
+        也可以  jsobject.onchange=function(){SomeJavaScriptCode};
+        change和click是jquery方法
+        $('').change（function（{}））或者;    $('').click（function（{}））
+        **onclick 是点击事件 onchange 是对象有了变化
+    16.动态添加的不能用 // this.parent().children().removeClass("title-active");
+    17.动态设置宽度时 必须先将元素加上去
+    18. // 将地铁线路追加到数组
+        var metro_line_data = data.data.subway;
+        var metro_line = [];
+        $.each(metro_line_data,function(i,val){
+            // 将地铁线路追加到数组
+            metro_line.push(i);
+        })
+    19.input框内容改变时触发事件
+        $("#input_test1").bind("input propertychange change",function(event){
+            $("#input_test2").val($("#input_test1").val());
+        }); 
+    19.
+    <input type="number" class="lower-limit" min="1"> 数字 输入框只能输入整数 最小值1
+        <input type="number" value="1"  min="0.0" step="0.1">
+        最小值为0，每一步步长为0.1，既可以输入0.1 0.2 0.3等等，没有最大值。则实现了既能输入整数，
+        又能输入一位小数的输入框验证，如果多位小数，可以再把步长缩小，如0.01等等。
+    19./* input type="number",移出上下箭头 */
+        /* chrome浏览器移除 */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button{
+            -webkit-appearance:textfield;
+        }
+        /* firefox浏览器下移除 */
+        input[type="number"]{
+            -moz-appearance:textfield;
+        }    
+    20.阻止父元素的冒泡事件
+        什么地方点击时不需要隐藏 就在该点击事件里阻止父元素的冒泡事假
+        $(".time").click(function(event){
+            event.stopPropagation();
+            $(".date_time").show();
+        });    
+    21.div获取焦点事件：
+         contenteditable="true"
+    22.表头元素切分
+        var href = location.href.split("?")[1];     
+        var data_arr = href.split("&");
+        console.log(data_arr);
+        console.log(decodeURI(data_arr[2].split("=")[1]));
+<!-- 笔记end -->
+<!-- 错误start -->
+    1.动态添加的li标签清除不了：
+        定义的参数放的位置有问题，应该放到函数里面 掉一次函数 就要定义一次
+<!-- 错误end -->
+<!-- 功能实现start -->
+    1.微信绑定 背景变色：
+        1.一个大的div1长宽整个页面的长宽 绝对定位 占据整个窗口 有个背景颜色 开始隐藏
+        2.包含一个小的div2 里面放二维码
+        3.点击绑定按钮，div1显示（div1就是整个页面） 点击任意地方 隐藏
+    2.选择城市框
+        1.动态添加城市类型的标题 hover事件 放到哪个上面获取其元素
+        2.城市类型标题是否为hot 
+            1.是：获取所有的热门城市 动态添加
+            2.否：indexOf（） 获取该城市类型下的所有城市 添加到一个空数座里面 将该数组内容动态添加
+<!-- 功能实现end -->
+<!-- 项目start -->
+    登录公共部分：login-public.css
+        页头  页尾
+    公共部分：other-public.css
+        1.页头：header
+            左侧：APIS|酒店项目
+            右侧：
+                登录 注册    ；  
+                头像图片 姓名 下三角（我的订单 账户设置 退出登录） 我的订单
+        2.页脚:footer
+    <!-- 注册->登录(忘记密码)->密码找回     -->
+    1.公共样式：login-public.css
+        头部 底部 
+    登录：
+        1.两个button 点击谁谁的背景颜色变为#5944C3 下方小三角出现 宽度变为225
+    头部:header
+    中心部分：main
+    底部：footer
 
-    还有一点特别注意的是： data- 属性名如果包含了连字符，例如：data-date-of-birth ，
-    连字符将被去掉，并转换为驼峰式的命名，前面的属性名转换后应该是： dateOfBirth 。
+    注册：Register.html
+    登录：账号登录 短信快捷登录 :Login.html     
+    忘记密码、修改密码：验证身份 重置密码 BackPassword.html
 
-    <div id="user" data-id="1234567890" data-name="愚人码头" data-date-of-birth>码头</div>
-    <script type="text/javascript">
-    var el = document.querySelector('#user');
-    console.log(el.id); // 'user'
-    console.log(el.dataset);//一个DOMStringMap
-    console.log(el.dataset.id); // '1234567890'
-    console.log(el.dataset.name); // '愚人码头'
-    console.log(el.dataset.dateOfBirth); // ''
-    el.dataset.dateOfBirth = '1985-01-05'; // 设置data-date-of-birth的值.
-    console.log('someDataAttr' in el.dataset);//false
-    el.dataset.someDataAttr = 'mydata';
-    console.log('someDataAttr' in el.dataset);//true
-    </script>
-    关于data-属性选择器:
-    在实际开发时，您可能会发现它很有用，你可以根据自定义的 data- 属性选择相关的元素。例如使用querySelectorAll选择元素：
+    <!-- 账户设置->绑定微信 -->
+    账户设置：AccountSet.html
+    <!-- 首页/筛选->酒店详情->预定（->支付）->个人中心->查看/支付/取消预定/去评价 -->
+    首页（选城市 选时间）：index.html    main-top>header+ul>li*3  
+    筛选（行政区、商圈、地铁站、车站、景点）：HotelFilter.html    
+    酒店详情：HotelDetails.html
+    预定：HotelReservation.html
+    支付：Payment.html
+    个人中心：（订单）PersonalCenter.html
+    评价：Center-toevaluate.html
+    查看：（订单状态。。。）Center-tosee.html
+    取消预定：Center-tocancel.html
+    <!-- 筛选start -->
+        <!-- 行政区 -->
+        var Administrative_position = $(this).html();
+        <!-- 商圈 -->
+        var trading_position = $(this).html();
+        <!-- 地铁站 -->
+        var Metro_position = $(this).html();
+        <!-- 车站 -->
+        Station_position
+        <!-- 景点 -->
+        scenic_spot_position
+        <!-- 筛选页面 -->
+        1.位置：
+            共性：
+                1.点击任意选择框标题 
+                    1.该标题变化 该选择框显示
+                    2.其余选择框标题恢复原状 其余选择框隐藏
+                2.点击页面中任意区域 选择框消失 选择框标题恢复原状 （对任一选择框都是这样）
+                3.城市输入框内容变化 或者 点击的标题变化时，进行ajax请求
+                
+            1.行政区：
+                1.点击标题
+                    1.进行城市判断
+                        城市输入框中内容是否为空 
+                            空：请选择城市
+                            非空：定义cityName 
+                                如果cityName与checkCityName（校验城市名称）不等 
+                                或 
+                                当前点击的title值与checkTitle（校验点击事件是否为为同一个）不等
+                                    进行ajax请求
+                                        请求到的数据添加到ul中
+                                        点击的标题变色 ul显示
+                                            点击哪个元素就给哪个添加position_active 赋值 其余清除赋值
+                                            ul隐藏
+                                均相等：
+                                    点击的标题变色 ul显示
+                                        点击哪个元素就给哪个添加position_active 赋值 其余清除赋值
+                                        ul隐藏       
+            2.地铁站：
+                1.点击标题
+                    1.进行城市判断
+                        城市输入框中内容是否为空 
+                            空：请选择城市
+                            非空：定义cityName 
+                                如果cityName与checkCityName（校验城市名称）不等 
+                                    令其相等
+                                    进行ajax请求
+                                    <!-- 地铁 -->
+                                        请求到的分类名称数据添加到ul1中（该ul下的li标签宽度提前设置好的）
+                                        请求到的站名数据添加到div中（ul形式插入）
+                                            默认初始状态：
+                                                ul1的第一个li标签处于选中状态
+                                                div的第一个ul显示
+                                        点击的titel变化
+                                        内容框显示：         
+                                            分类名称的点击事件：
+                                                ul1中的第几个li标签被选中 给该li标签添加position-active类，div中对应的第几个ul显示
+                                                    定义函数    
+                                                    <!-- 站名数据的点击事件：
+                                                        给当前点击的元素添加position-active类
+                                                        调用函数，清除之前点击保存的其他位置下的赋值
+                                                        保存当前点击的数据Metro_position
+                                                        整个内容框隐藏      -->
+                                    <!-- 车站 -->
+                                        请求到的车站数据按次序依次添加到对应div下的ul中
+                                        给每个div动态设置高度 li标签设置宽度
+                                        点击的title变化
+                                        内容框显示
+                                            定义函数    
+                                            <!-- 站名数据的点击事件：
+                                                给当前点击的元素添加position-active类
+                                                调用函数，清除之前点击保存的其他位置下的赋值
+                                                保存当前点击的数据Station_position
+                                                整个内容框隐藏      -->
+                                均相等：
+                                    <!-- 地铁站 -->
+                                    点击的titel变化
+                                    内容框显示：         
+                                        分类名称的点击事件：
+                                            ul1中的第几个li标签被选中 给该li标签添加position-active类，div中对应的第几个ul显示
+                                                定义函数    
+                                                <!-- 站名数据的点击事件：
+                                                    给当前点击的元素添加position-active类
+                                                    调用函数，清除之前点击保存的其他位置下的赋值
+                                                    保存当前点击的数据Metro_position
+                                                    整个内容框隐藏      -->
+                                    <!-- 车站 -->
+                                    点击的title变化
+                                        内容框显示
+                                            定义函数    
+                                            <!-- 站名数据的点击事件：
+                                                给当前点击的元素添加position-active类
+                                                调用函数，清除之前点击保存的其他位置下的赋值
+                                                保存当前点击的数据Station_position
+                                                整个内容框隐藏      -->
+            3.不限
+                点击不限button 选中元素的赋值全为空 不限button为蓝色  
 
-    javascript 代码:
-    // 选择所有包含 'data-flowering' 属性的元素
-    document . querySelectorAll ( '[data-flowering]' ) ;
 
-    // 选择所有包含 'data-text-colour' 属性值为red的元素
-    document . querySelectorAll ( '[data-text-colour="red"]' ) ;
-<!-- /**
-    * insertAdjacentHTML(position, text) 将指定的文本解析为HTML或XML，
-    * 并将结果节点插入到DOM树中的指定位置。它不会重新解析它正在使用的元素，
-    * 因此它不会破坏元素内的现有元素。
-    * 这避免了额外的序列化步骤，使其比直接innerHTML操作更快。
-    * 'afterbegin'插入元素内部的第一个子节点之前。
-    *'beforebegin'元素自身的前面。
-    *'beforeend'插入元素内部的最后一个子节点之后。
-    *'afterend'元素自身的后面。
-    */ -->
+        2.价格：
+            点击事件：
+                定义价格区间priceRange
+                点击任一li标签 
+                    1.所有价格下的图片都变回原图
+                    2.该li标签下的图片更改
+                    3.不限按钮变色灰色
+                    4.获取该li标签的data-price的值赋值给priceRange 
+                <!-- 另定义 -->
+                <!-- 自定义价格区间：
+                    Custom-price 下的input输入框失去焦点时判断
+                    1.检测左右输入框中内容是否为空 
+                        均不为空：
+                            1.确定按钮改变颜色 变为可用
+                            点击确定按钮：
+                                1.获取输入框的值用英文逗号拼接成字符串赋值给priceRange
+                                2.不限按钮变色灰色 -->
+                点击不限按钮：
+                    1.不限按钮变回蓝色
+                    2.所有价格下的图片都变回原图
+                    3.自定义中的值清空
+                    4.确定按钮变回灰色 为不可用状态
+        3.星级：starLevel
+    <!-- 筛选页end -->
+    <!-- 酒店详情start -->
+     <!-- 布局start -->
+        1.酒店名称div
+            1.酒店信息
+        2.酒店图片
+        3.中间导航栏
+        4.房型预定
+        5.酒店信息
+        6.交通位置
+        7.用户评价
+     <!-- 布局end -->
+     <!-- 功能效果start -->
+        1.酒店图片：
+            功能：
+                1.初始默认第一张图片在左侧
+                2.点击右侧任一张图片
+                    1.该图片从右侧移出 显示在左侧 
+                    2.右侧的图片往上补 
+                    3.左侧原来的图片显示在右侧最下面 
+        2.中间导航栏（房型预定、酒店信息、交通位置、用户评价）
+            功能：
+                点击哪一项就跳到对应的位置上
+     <!-- 功能效果end -->
+     <!-- 预订start -->
+        点击预订按钮：
+            1.到达生成订单页面
+            2.路径上添加：
+                1.左侧：酒店图片 酒店名称 酒店地址 酒店电话 房间名称 床型 面积 宽带 早餐
+                2.酒店id 入住和离开时间 房间价格 
+            
+     <!-- 预订end -->
+     <!-- 分页start -->
+        分页动态添加：
+            1.获取酒店总评论数 
+            2.总评论数除每页评论数得到总页数page_all
+            3.动态添加：
+                1.page_all<7时
+                    1.动态添加1~6页
+                    2.请求第page页数据
+                    3.给第page个li标签添加active
+                    4.page=1时 上一页不可用
+                    5.page=page_all时 下一页不可用
+                    6.点击上一页 重新请求数据 page为page-1 重复第四步
+                    7.点击下一页 重新请求数据 page=page+1 重复第五步
+                2.page_all>=7时
+                    1.page<=3时 请求第page页数据 给第page个li标签添加active 
+                        重复一的第四步
+                    2.page>3时 
+                        page_all = 7:    
+                            page=4时 2 3 4 5 6 7  3
+                            page=5时 2 3 4 5 6 7   4
+                        page_all = 8 :
+                            page=4时 2 3 4 。。7 8  
+                            page=5时 3 4 5 6 7 8    3
+                        page_all = 9:
+                            page=4时 2 3 4 。。。 8 9 
+                            page=5时 3 4 5 。。。 8 9 
+                            page=6时 4 5 6 7 8 9      3
+                        结论：
+                            1.page_all - page <=3 时 不需添加。。。 page_all - page >3时 需添加。。。
+                            2.page>=4时 
+                                判断一：
+                                    不需添加。。。：动态添加page_all-4~page_all
+                                    需添加。。。：左侧添加page-2~page 中间添加。。。 右侧添加page_all-1~page_all
 
+
+
+
+
+
+            
+     <!-- 分页end -->
+    
+    <!-- 酒店详情end -->
+    <!-- 个人中心start -->
+        1.订单状态及操作
+            查看
+            待支付 去支付 topay
+            预定中 取消预定 tocancel
+            已完成 去评价 toevaluate
+            已取消
+
+            查看：详细信息：
+                    我的评价：
+                        订单状态为 待评价 时 有一个按钮：去评价
+                        订单状态为 预定中 时 添加按钮： 完成订单
+                        订单状态为 已完成 时 添加评价内容
+                        
+            取消预定：
+                先获取详细信息 再提交信息             
+
+                    
+    <!-- 个人中心end -->
+<!-- 项目end -->
+
+
+
+<!-- 笔记start -->
+    1.使用 .done() ， .fail() ， .always() 来代替传统回调
+    <!-- jqXHR.fail(function(jqXHR, textStatus, errorThrown) {});
+    一种可供选择的请求失败时调用的回调选项构造函数，.fail()方法取代了的过时的.error()方法。 -->
+    <!-- jqXHR.done(function(data, textStatus, jqXHR) {});
+    一种可供选择的请求成功时调用的回调选项构造函数，.done()方法取代了过时的.success()方法。 -->
+    <!-- jqXHR.always(function(data|jqXHR, textStatus, jqXHR|errorThrown) { });
+    一种可供选择的请求结束时调用的回调选项构造函数，.always()方法代替了过时的.complete()方法, -->
+    <!-- 当请求成功时，该函数的参数与.done()的参数一致；当请求失败时，该函数的参数与.fail()的参数一致。 -->
+    animate可以改变上下左右的宽高 
+        <!-- // $(selector).animate(styles,options)
+            // styles 必需。规定产生动画效果的 CSS 样式和值（同上）。
+            //options 可选。规定动画的额外选项。
+                可能的值：
+                speed - 设置动画的速度
+                easing - 规定要使用的 easing 函数
+                callback - 规定动画完成之后要执行的函数
+                step - 规定动画的每一步完成之后要执行的函数
+                queue - 布尔值。指示是否在效果队列中放置动画。如果为 false，则动画将立即开始
+                specialEasing - 来自 styles 参数的一个或多个 CSS 属性的映射，以及它们的对应 easing 函数 -->
+        6.border-raduis:50%~100%都是圆
+        7.setInterval
+        <!-- setInterval() 方法可按照指定的周期（以毫秒计）来调用函数或计算表达式。
+            setInterval() 方法会不停地调用函数，直到 clearInterval() 被调用或窗口被关闭。由 setInterval() 返回的 ID 值可用作 clearInterval() 方法的参数。
+            提示： 1000 毫秒= 1 秒。
+            提示： 如果你只想执行一次可以使用 setTimeout() 方法。
+        -->
+        1.用display显示时，点击显示闪一下就不见了：
+        用了a标签，需要去除超链接的默认行为
+            去除不了 换个方式 不用a标签                                         
+    dataset属性存取data-*自定义属性的值:
+        这种方式通过访问一个元素的 dataset 属性来存取 data-* 自定义属性的值。
+        这个 dataset 属性是HTML5 JavaScript API的一部分，用来返回一个所有选择元素 data- 属性的DOMStringMap对象。
+
+        使用这种方法时，不是使用完整的属性名，如 data-uid 来存取数据，应该去掉data- 前缀。
+
+        还有一点特别注意的是： data- 属性名如果包含了连字符，例如：data-date-of-birth ，
+        连字符将被去掉，并转换为驼峰式的命名，前面的属性名转换后应该是： dateOfBirth 。
+
+        <div id="user" data-id="1234567890" data-name="愚人码头" data-date-of-birth>码头</div>
+        <script type="text/javascript">
+        var el = document.querySelector('#user');
+        console.log(el.id); // 'user'
+        console.log(el.dataset);//一个DOMStringMap
+        console.log(el.dataset.id); // '1234567890'
+        console.log(el.dataset.name); // '愚人码头'
+        console.log(el.dataset.dateOfBirth); // ''
+        el.dataset.dateOfBirth = '1985-01-05'; // 设置data-date-of-birth的值.
+        console.log('someDataAttr' in el.dataset);//false
+        el.dataset.someDataAttr = 'mydata';
+        console.log('someDataAttr' in el.dataset);//true
+        </script>
+        关于data-属性选择器:
+        在实际开发时，您可能会发现它很有用，你可以根据自定义的 data- 属性选择相关的元素。例如使用querySelectorAll选择元素：
+
+        javascript 代码:
+        // 选择所有包含 'data-flowering' 属性的元素
+        document . querySelectorAll ( '[data-flowering]' ) ;
+
+        // 选择所有包含 'data-text-colour' 属性值为red的元素
+        document . querySelectorAll ( '[data-text-colour="red"]' ) ;
+    <!-- /**
+        * insertAdjacentHTML(position, text) 将指定的文本解析为HTML或XML，
+        * 并将结果节点插入到DOM树中的指定位置。它不会重新解析它正在使用的元素，
+        * 因此它不会破坏元素内的现有元素。
+        * 这避免了额外的序列化步骤，使其比直接innerHTML操作更快。
+        * 'afterbegin'插入元素内部的第一个子节点之前。
+        *'beforebegin'元素自身的前面。
+        *'beforeend'插入元素内部的最后一个子节点之后。
+        *'afterend'元素自身的后面。
+        */ -->
+<!-- 笔记end -->

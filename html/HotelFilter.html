@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>筛选-酒店</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/other-public.css">
+    <!-- <link rel="stylesheet" href="../css/index.css"> -->
+    <link rel="stylesheet" href="../css/HotelFilter.css">
+</head>
+<body>
+    <main>
+    <!-- 上部分start -->
+        <!-- 搜索按钮 -->
+        <div class="search-nav">
+            <ul class="select-ul">
+                <!-- 城市 -->
+                <li class="select-city fl">
+                    <input type="text" placeholder="请选择城市" class="city_input">
+                    <div class="select-city-div" style="display:none">
+                        <!-- 城市类型标题 -->
+                        <ul class="select-city-div-title">
+                        </ul>
+                        <!-- 城市类型内容 -->
+                        <!-- <ul class="select-city-div-content">
+                        </ul> -->
+                    </div>
+                </li>
+                <!-- 时间 -->
+                <li class="select-datatime fl">
+                    <input type="text" placeholder="请选择日期" class="time_input">
+                    <div class="date_time clearfix"  style="display:none">
+                        <div class="now_month_div">
+                            <!-- 年月 -->
+                            <div class="header">
+                                <button class="last_year"></button>
+                                <button class="last_month"></button>
+                                <div class="years">
+                                    <span class="year"></span>年&nbsp;<span class="month"></span>月
+                                </div>
+                            </div>
+                            <div class="week">
+                                <ul>
+                                    <li>日</li>
+                                    <li>一</li>
+                                    <li>二</li>
+                                    <li>三</li>
+                                    <li>四</li>
+                                    <li>五</li>
+                                    <li>六</li>
+                                </ul>
+                            </div>
+                            <div class="day">
+                                <ul>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="next_month_div">
+                            <div class="header">
+                                <button class="next_year"></button>
+                                <button class="next_month"></button>
+                                <div class="years">
+                                    <span class="year"></span>年&nbsp;<span class="month"></span>月
+                                </div>
+                            </div>
+                            <div class="week">
+                                <ul>
+                                    <li>日</li>
+                                    <li>一</li>
+                                    <li>二</li>
+                                    <li>三</li>
+                                    <li>四</li>
+                                    <li>五</li>
+                                    <li>六</li>
+                                </ul>
+                            </div>
+                            <div class="day">
+                                <ul>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- 关键字 -->
+                <li class="select-keyword fl">
+                    <input type="text" placeholder="酒店名称/位置/关键字" class="hotelKeyword">
+                </li>
+                <li class="button-search fr">
+                    <button class="search-btn">
+                        <img src="../img/icon_search.png" alt="">
+                        搜索
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <!-- 搜索框 -->
+        <div class="search-choice">
+            <!-- 位置 -->
+            <div class="position">
+                <div class="name fl">位置</div>
+                <ul>
+                    <li class="unlimited-li"><button class="unlimited">不限</button></li>
+                    <li class="position-area">
+                        <div class="Administrative-area">
+                            <span class="area-name Administrative-text">行政区</span>
+                            <img src="../img/icon_down.png" alt="" style="transform: rotate(0deg)">
+                            <ul class="Administrative-content" style="display:none">
+                                <!-- <li>莲湖区</li><li>莲湖区</li><li>莲湖区</li><li>莲湖区</li><li>莲湖区</li><li>莲湖区</li><li>莲湖区</li><li>莲湖区</li><li>莲湖区</li><li>莲湖区</li> -->
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="position-area">
+                        <div class="trading">
+                            <span class="area-name trading-text">商圈</span>
+                            <img src="../img/icon_down.png" alt="" style="transform: rotate(0deg)">
+                            <ul class="trading-content" style="display:none">
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="position-area">
+                        <div class="Metro-station">
+                            <span class="area-name Metro-station-text">地铁站</span>
+                             <img src="../img/icon_down.png" alt="" style="transform: rotate(0deg)">
+                            <div class="Metro-content" style="display:none">
+                                <ul class="metro-line">
+                                    <!-- <li class="active">1号线</li><li>1号线</li> -->
+                                </ul>
+                                <div class="Metro-line-content">
+
+                                </div>
+                                <!-- <ul class="metro-line-content" >
+                                    <li>北大街</li><li>北大街</li><li>北大街</li>
+                                </ul> -->
+                            </div>
+                        </div>
+                    </li>
+                    <li class="position-area">
+                        <div class="Station">
+                            <span class="area-name Station-text">车站</span>
+                            <img src="../img/icon_down.png" alt="" style="transform: rotate(0deg)">
+                            <div class="Station-content" style="display:none">
+                                <div>
+                                    <img src="../img/Train_station.png" alt="">
+                                    <ul class="station-train">
+                                        <!-- <li>西安站</li><li>西安站</li><li>西安站</li><li>西安站</li><li>西安站</li><li>西安站</li><li>西安站</li><li>西安站</li> -->
+                                    </ul>  
+                                </div>
+                                <div>
+                                    <img src="../img/Bus_station.png" alt="">
+                                    <ul class="station-bus">
+                                        <!-- <li>西安站西安站</li><li>纺织城客运站</li><li>西安站</li><li>西安站</li><li>西安站</li><li>西安站</li><li>西安站</li><li>西安站</li> -->
+                                    </ul>  
+                                </div>
+                                <div>
+                                    <img src="../img/Aircraft_station.png" alt="">
+                                    <ul class="station-airport">
+                                        <!-- <li>西安咸阳国际机场</li><li>西安站</li> -->
+                                    </ul>  
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="position-area">
+                        <div class="scenic-spot">
+                            <span class="area-name scenic-spot-text">景点</span>
+                           <img src="../img/icon_down.png" alt="" style="transform: rotate(0deg)">
+                           <ul class="scenic-spot-content" style="display:none">
+
+                           </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- 价格 -->
+            <div class="price">
+                <div class="name fl">价格</div>
+                <ul>
+                    <button class="unlimited">不限</button>
+                    <!-- icon_checkbox.png -->
+                    <li data-price="0,100">
+                        <img src="../img/icon_checkbox.png" alt="" data-src="icon_checkbox_choose.png">
+                        <span>100元以下</span>
+                    </li>
+                    <li data-price="100,300">
+                        <img src="../img/icon_checkbox.png" alt="" data-src="icon_checkbox_choose.png">
+                        <span>100-300元 </span>
+                    </li>
+                    <li data-price="300,600">
+                        <img src="../img/icon_checkbox.png" alt="" data-src="icon_checkbox_choose.png">
+                        <span>300-600元 </span>
+                    </li>
+                    <li data-price="600,1000">
+                        <img src="../img/icon_checkbox.png" alt="" data-src="icon_checkbox_choose.png">
+                        <span>600-1000元 </span>
+                    </li>
+                    <div class="Custom-price fr">
+                        自定义
+                        <input type="number" class="lower-limit" min="0">
+                        -
+                        <input type="number" class="upper-limit" min="0">
+                        <button disabled="disabled" class="ok_btn">确定</button>
+                    </div>
+                </ul>
+            </div>
+            <!-- 星级 -->
+            <div class="star">
+                <div class="name fl">星级</div>
+                <ul>
+                    <button class="unlimited">不限</button>
+                    <!-- icon_checkbox.png -->
+                    <li data-star="5" class="starLevel">
+                        <img src="../img/icon_checkbox.png" alt="" data-src="icon_checkbox_choose.png">
+                        <span>五星/豪华</span>
+                    </li>
+                    <li data-star="4" class="starLevel">
+                        <img src="../img/icon_checkbox.png" alt="" data-src="icon_checkbox_choose.png">
+                        <span>四星/高档</span>
+                    </li>
+                    <li data-star="4" class="starLevel">
+                        <img src="../img/icon_checkbox.png" alt="" data-src="icon_checkbox_choose.png">
+                        <span>三星/舒适</span>
+                    </li>
+                    <li data-star="4" class="starLevel">
+                        <img src="../img/icon_checkbox.png" alt="" data-src="icon_checkbox_choose.png">
+                        <span>二星及以下</span>
+                    </li>
+                    <li data-star="经济连锁" class="specialLevel">
+                        <img src="../img/icon_checkbox.png" alt="" data-src="icon_checkbox_choose.png">
+                        <span>经济连锁</span>
+                    </li>
+                    <li data-star="客栈公寓" class="specialLevel">
+                        <img src="../img/icon_checkbox.png" alt="" data-src="icon_checkbox_choose.png">
+                        <span>客栈公寓</span>
+                    </li>
+                </ul>
+            </div>
+            <!-- 品牌 -->
+            <div class="brand">
+                <div class="name fl">品牌</div>
+                <ul>
+                   <button class="unlimited">不限</button>
+                    <!-- icon_checkbox.png -->
+                    <li data-brand="如家快捷">
+                        <img src="../img/icon_checkbox.png" alt="" data-src="icon_checkbox_choose.png">
+                        <span>如家快捷</span>
+                    </li>
+                    <li data-brand="汉庭酒店">
+                        <img src="../img/icon_checkbox.png" alt="" data-src="icon_checkbox_choose.png">
+                        <span>汉庭酒店</span>
+                    </li>
+                    <li data-brand="七天连锁">
+                        <img src="../img/icon_checkbox.png" alt="" data-src="icon_checkbox_choose.png">
+                        <span>七天连锁</span>
+                    </li>
+                    <li data-brand="锦江之星">
+                        <img src="../img/icon_checkbox.png" alt="" data-src="icon_checkbox_choose.png">
+                        <span>锦江之星</span>
+                    </li>
+                    <li data-brand="布丁">
+                        <img src="../img/icon_checkbox.png" alt="" data-src="icon_checkbox_choose.png">
+                        <span>布丁</span>
+                    </li>
+                    <li data-brand="速8">
+                        <img src="../img/icon_checkbox.png" alt="" data-src="icon_checkbox_choose.png">
+                        <span>速8</span>
+                    </li>
+                    <!-- <li class="more"> -->
+                    <div class="fr more">
+                        更多
+                        <img src="../img/icon_down.png" alt="">
+                    </div>
+                    <!-- </li> -->
+                </ul>
+            </div>
+        </div>
+    <!-- 上部分end -->
+    <!-- 下部分 -->
+        <div class="sort">
+            <ul class="sort-title">
+                <li class="sort-recommend">推荐</li>
+                <li class="sort-evaluate">评价
+                    <img src="../img/icon_arrow_down1.png" alt="">
+                </li>
+                <li class="sort-price">价格
+                    <img src="../img/icon_arrow_up1.png" alt="">
+                </li>
+                <li class="sort-distance">距离
+                    <img src="../img/icon_arrow_up1.png" alt="">
+                </li>
+            </ul>
+            <div class="hotel-main clearfix">
+                <!-- 排序主体 -->
+                <!-- <div class="hotel-sort fl">
+                    <img src="../img/jq.jpg" alt="" class="fl">
+                    <div class="hotel-detail fl">
+                        <span class="hotel-detail-name fl">西安开元名都大酒店</span>
+                        <span class="hotel-detail-start fr">
+                            <img src="../img/icon_star.png" alt="">
+                            <img src="../img/icon_star.png" alt="">
+                            <img src="../img/icon_star.png" alt="">
+                            <img src="../img/icon_star.png" alt="">
+                            <img src="../img/icon_star.png" alt="">
+                        </span>
+                        <div class="hotel-detail-address fl">
+                            碑林区友谊东路33号，西藏驻西安办事处家属院内
+                            <span class="map-link">-地图</span>
+                        </div>
+                    </div>
+                    <div class="hotel-score fl">
+                        <span><span class="score">4.9</span>/5分</span>
+                        <div class="comment"><span>1156</span>次点评</div>
+                    </div>
+                    <div class="hotel-price fr">
+                        <span><span class="hotel-pricered">￥4888</span>起</span>
+                        <button class="tosee">查看详情</button>
+                    </div>
+                </div> -->
+                <!-- 地图 -->
+                <div class="map fr" id="container">
+                    
+                </div>
+            </div> 
+            <!-- 分页start -->
+            <!-- <div class="paging ">
+                <button class="pre-page fl"></button>
+                <ul class="fl">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>...</li>
+                    <li>12</li>
+                    <li>13</li>
+                </ul>
+                <button class="next-page fr"></button>
+            </div> -->
+            <!-- 分页end -->
+        </div>
+    <!-- 下部分end -->
+    </main>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<!-- 地图 -->
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=GhVG3L2qIqRLRNK3rqqUFKHxsZzsXXt1"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/url.js"></script>
+<script src="../js/other-public.js"></script>
+<script src="../js/HotelFilter.js"></script>
+</html>

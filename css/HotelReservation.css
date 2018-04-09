@@ -1,0 +1,259 @@
+
+main {
+    width: 1012px;
+    height: 551px;
+    /* border: 1px solid #000; */
+    margin: 0 auto;
+    margin-top: 31px;
+}
+/* 左侧 */
+    .left-div {
+        width: 305px;
+        height: 551px;
+    }
+    /* 酒店 */
+    .hotel-div {
+        border-bottom: 1px solid rgba(0,0,0,0.25);;
+    }
+    .hotel-div img {
+        width: 305px;
+        height: 234px;
+    }
+    .hotel-title {
+        display: block;
+        margin-top: 23px;
+        margin-bottom: 9px;
+        font-family: HiraginoSansGB-W6;
+        font-size: 16px;
+        color: #3E3E3E;
+    }
+    .hotel-address {
+        font-family: PingFangSC-Regular;
+        font-size: 13px;
+        color: #3E3E3E;
+    }
+    .hotel-tel {
+        display: block;
+        margin-top: 15px;
+        margin-bottom: 9px;
+        font-family: HiraginoSansGB-W3;
+        font-size: 14px;
+        color: #3E3E3E;
+    }
+    /* 房间 */
+    .room-div>span {
+        display: block;
+    }
+    .room-div span {
+        font-family: HiraginoSansGB-W3;
+        font-size: 14px;
+        color: #3E3E3E;
+        margin-bottom: 12px;
+    }
+    .room-div .room-name {
+        font-family: HiraginoSansGB-W6;
+        margin-top: 17px;
+        margin-bottom: 14px;
+    }
+/* 右侧 */
+    .right-div {
+        width: 691px;
+        height: 595px;
+        background: #FFFFFF;
+        box-shadow: 0 0 6px 0 rgba(0,0,0,0.12), 0 6px 6px 0 rgba(0,0,0,0.18);
+    }
+   /* 预定信息start */
+    .reservation-information-div {
+        height: 251px;
+        border-bottom: 1px solid rgba(0,0,0,0.25);
+    }
+    .reservation-title {
+        display: block;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        margin-left: 22px;
+        font-family: HiraginoSansGB-W6;
+        font-size: 16px;
+        color: #3E3E3E;
+    }
+    .reservation-content {
+        margin-left: 25px;
+    }
+    .reservation-content>li {
+        /* margin-bottom: 25px; */
+        font-family: HiraginoSansGB-W3;
+        font-size: 14px;
+        color: #3E3E3E;
+    }
+    .reservation-content>li {
+        line-height: 38px;
+    }
+    .room-type {
+        margin-bottom: 15px;
+    }
+    /* 选择时间 */
+    .in-out-time {
+        /* margin-top: 18px; */
+        /* margin-bottom: 17px; */
+        line-height: 38px;
+        font-family: PingFangSC-Regular;
+        font-size: 14px;
+        color: #3E3E3E;
+    }
+    .in-out-time li {
+        display: inline-block;
+        line-height: 38px;
+    }
+    .in-room-div,.out-room-div {
+        display: inline-block;
+        width: 227px;
+        height: 36px;
+        background: #FFFFFF;
+        border: 1px solid #C0CCDA;
+        border-radius: 4px;
+        margin-left: 7px;
+        margin-right: 12px;
+        font-family: HiraginoSansGB-W6;
+        font-size: 14px;
+        color: #3E3E3E;
+        letter-spacing: 0;
+        line-height: 14px;
+        cursor: pointer;
+        background: url(../img/../img/icon_day.png) no-repeat 200px;
+    }
+    .in-room-div>span,.out-room-div>span {
+        line-height: 36px;
+    }
+    .in-room-div>.fl,.out-room-div>.fl {
+        margin-left: 12px;
+    }
+    .in-room-div>.fr,.out-room-div>.fr {
+        margin-right: 30px;
+    }
+    .in-room-li,.out-room-li {
+        position: relative;
+    }
+    .in-room-li .in-room-div {
+        margin-left: 0;
+    }
+    .date_time {
+        position: absolute;
+    }
+    /* 房间数量 */
+    .room-num {
+        line-height: 38px;
+    }
+    .num {
+        width: 110px;
+        height: 36px;
+        text-indent: 1em;
+        font-size: 14px;
+    }
+    .room-num-select-div {
+        width: 180px;
+        height: 36px;
+        background: #FFFFFF;
+        border: 1px solid rgba(0,0,0,0.25);
+        border-radius: 4px;
+    }
+    .error {
+        font-size: 12px;
+        margin-left: 20px;
+        color: #FF4949;
+    }
+    .num-sub,.num-add {
+        width: 34px;
+        height: 36px;
+        border-left: 1px solid #C0CCDA;
+        font-size: 21px;
+        color:  #3E3E3E;
+        background: #fff;
+    }
+    .num-no {
+        color: #99A9BF;
+    }
+    .num-active {
+        color: #5944C3;
+    }
+    /* 房费总计 */
+    .room-price-all {
+        margin-top: 15px;
+    }
+    .room-price-all span,.price {
+        font-family: HiraginoSansGB-W6;
+        font-size: 18px;
+        color: rgba(251,67,10,1);
+        line-height: 21px;
+    }
+   /* 预定信息end */
+    /* 入住信息 */
+    .inHotel-information {
+        height: 166px;
+        border-bottom: 1px solid rgba(0,0,0,0.25);
+    }
+    .inHotel-title {
+        margin-left: 22px;
+        margin-top: 24px;
+        margin-bottom: 10px;
+        font-family: HiraginoSansGB-W6;
+        font-size: 16px;
+        color: #3E3E3E;
+    }
+    .inHotel-information ul {
+        line-height: 50px;
+        margin-left: 22px;
+        font-family: HiraginoSansGB-W3;
+        font-size: 14px;
+        color: #3E3E3E;
+    }
+    .asterisk {
+        margin-right: 12px;
+        color: #FF4949;
+        line-height: 56px;
+    }
+    .inHotel-information input {
+        width: 180px;
+        height: 36px;
+        border-radius: 4px;
+        background: #fff;
+        border: 1px solid rgba(0,0,0,0.25);
+        font-family: PingFangSC-Regular;
+        font-size: 14px;
+        color: rgba(62,62,62,0.7);
+        letter-spacing: 0;
+        line-height: 14px;
+        text-indent: 1em;
+        margin-right: 14px;
+    }
+    .inHotel-information input:focus {
+        border-color: rgba(255,73,73,1);
+    }
+    .username-remind,.phone-remind {
+        font-family: PingFangSC-Regular;
+        font-size: 12px;
+        color: #FF4949;
+        letter-spacing: 0;
+    }
+    /* 提交订单 */
+    .submit-order-div {
+        height: 128px;
+    }
+    .message {
+        font-family: PingFangSC-Regular;
+        font-size: 14px;
+        color: #3E3E3E;
+        letter-spacing: 0;
+        line-height: 60px;
+        margin-left: 25px;
+        margin-right: 27px;
+    }
+    .submit-btn {
+        margin-right: 27px;
+        width: 113px;
+        height: 36px;
+        border-radius: 3px;
+    }
+    .button-active {
+        background: #5944C3;
+        color: #fff;
+    }

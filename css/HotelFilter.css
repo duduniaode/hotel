@@ -1,0 +1,342 @@
+
+.select-ul {
+    margin: 38px auto;
+}
+.search-btn {
+    height: 36px;
+    width: 81px;
+    background: #5944C3;
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+}
+.search-choice .position-active {
+    background: #5944C3;
+    color: #fff;
+}
+/* 搜索框分类框start */
+    .search-choice {
+        height: 193px;
+        width: 1013px;
+        margin: 0 auto;
+        margin-bottom: 41px;
+        border-top: 3px solid rgba(89,68,195,0.15);
+        border-bottom: 3px solid rgba(89,68,195,0.15);
+    }
+    /* 位置 */
+    .search-choice .name {
+        font-family: PingFangSC-Regular;
+        font-size: 16px;
+        color: #303030;
+        letter-spacing: 0;
+        width: 92px;
+        height: 46px;
+        line-height: 48px;
+        text-align: center;
+        background: #F1F1F1;
+        display: inline-block;
+    }
+    .search-choice>div>ul {
+        display: inline-block;
+        line-height: 46px;
+        height: 46px;
+        width: 921px;
+        border-bottom: 3px solid rgba(89,68,195,0.15);
+        cursor: pointer;
+    }
+    .brand ul {
+        border: none;
+    }
+    .search-choice li {
+        display: inline-block;
+        font-family: HiraginoSansGB-W3;
+        font-size: 14px;
+        color: #3E3E3E;
+        letter-spacing: 0;
+    }
+    .position img {
+        margin-top: -3px;
+    }
+    .position li {
+        margin-right: 49px;
+    }
+    .price li {
+        margin-right: 28px;
+    }
+    .star li {
+        margin-right: 34px;
+    }
+    .brand li {
+        margin-right: 40px;
+    }
+    .position .unlimited-li,.price .unlimited-li,.star .unlimited-li,.brand .unlimited-li {
+        margin-right: 0;
+    }
+    .unlimited {
+        width: 54px;
+        height: 22px;
+        background: #5944C3;
+        border-radius: 81px;
+        margin: 0 23px;
+        font-family: PingFangSC-Regular;
+        font-size: 14px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+    }
+    .position-area>div {
+        position: relative;
+    }
+    .position .Administrative-content {
+        width: 387px;
+        line-height: 0;
+    }
+    .Administrative-content,.trading-content,.Metro-content,
+    .Station-content,.scenic-spot-content {
+        position: absolute;
+        /* height: 30px; */
+        line-height: 0;
+        top: 35px;
+        left: 0px;
+        background: #FFFFFF;
+        box-shadow: 0 2px 6px 0 rgba(0,0,0,0.15), 0 0 6px 0 rgba(0,0,0,0.15);
+    }
+    .trading-content {
+        width: 439px;
+    }
+    /* 商圈end */
+    /* 地铁站start */
+    .Metro-content {
+        width: 504px;
+    }
+    .metro-line {
+        height: 31px;
+        line-height: 31px;
+        border-bottom: 1px solid #5944C3;
+    }
+    .Metro-content .metro-line li {
+        line-height: 32px;
+        width: 72px;
+        height: 32px;
+    }
+    .Station-content {
+        width: 439px;
+    }
+    .scenic-spot-content {
+        width: 410px;
+    }
+    .Administrative-content li,.trading-content li,.Metro-content li,
+    .Station-content li,.scenic-spot-content li {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        cursor: pointer;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+    }
+    .position .area-active {
+        color: #5944C3;
+    }
+    /* 地铁站end */
+    /* 车站start */
+    .Station-content>div {
+        width: 439px;
+        /* height: 80px; */
+        position: relative;
+    }
+    .Station-content>div>img {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+    .Station-content>div>ul{
+        width: 390px;
+        float: right;
+    }
+    .Station-content li {
+        width: 93px;
+        /* text-align: left; */
+    }
+    .station-airport li {
+        width: 123px;
+    }
+    /* 车站end */
+    
+    /* 价格 */
+    .price img,.star img,.brand img {
+        margin-right: 6px;
+        margin-top: -2px;
+    }
+    .Custom-price input,.Custom-price button {
+        width: 59px;
+        height: 28px;
+        border-radius: 4px;
+    }
+    .Custom-price input {
+        font-family: HiraginoSansGB-W3;
+        font-size: 12px;
+        color: #3E3E3E;
+        letter-spacing: 0;
+        text-indent: 1em;
+        border: 1px solid #C0CCDA;
+    }
+    .lower-limit {
+        margin-left: 11px;
+    }
+    .Custom-price button {
+        background: rgba(149,149,149,0.5);
+        /* background: #5944C3; */
+        font-family: PingFangSC-Regular;
+        font-size: 14px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+        margin-left: 19px;
+    }
+    .Custom-price {
+        margin-right: 30px;
+        font-family: HiraginoSansGB-W3;
+        font-size: 14px;
+        color: #3E3E3E;
+        letter-spacing: 0;
+    }
+    /* 品牌 */
+    .more {
+        margin-right: 60px;
+        font-family: HiraginoSansGB-W3;
+        font-size: 14px;
+        color: #3E3E3E;
+        letter-spacing: 0;
+    }
+/* 搜索分类框end */
+/* 列表排序start */
+    .sort .position-active {
+        background: #5944C3;
+        color: #fff;
+    }
+    .sort {
+        width: 1012px;
+        margin: 0 auto;
+    }
+    /* 标题 */
+    .sort-title {
+        width: 1012px;
+        height: 40px;
+        line-height: 40px;
+        background: #F1F1F1;
+        border-bottom: 3px solid #5944C3;
+        font-family: PingFangSC-Regular;
+        font-size: 16px;
+        color: #3E3E3E;
+    }
+    .sort li {
+        display: inline-block;
+        /* width: 70px; */
+        padding: 0 9px 0 16px;
+        text-align: center;
+        cursor: pointer;
+    }
+    .sort-evaluate img {
+        width: 18px;
+        height: 18px;
+    }
+    /* 主体 */
+    .hotel-main {
+        width: 1012px;
+        margin: 0 auto;
+    }
+    .hotel-sort {
+        height: 156px;
+        width: 688px;
+        padding: 22px 0;
+        border-bottom: 3px solid rgba(0,0,0,0.20);
+    }
+    .hotel-sort>img {
+        width: 170px;
+        height: 156px;
+    }
+    .hotel-detail {
+        width: 240px;
+        margin: 17px 16px 0 25px;
+        font-family: HiraginoSansGB-W6;
+        font-size: 16px;
+        color: #3E3E3E;
+    }
+    .hotel-detail-start img {
+        width: 14px;
+        height: 14px;
+        margin-right: -1px;
+    }
+    .hotel-detail-address {
+        font-family: PingFangSC-Regular;
+        font-size: 13px;
+        color: #3E3E3E;
+        margin-top: 8px;
+        width: 194px;
+    }
+    .map-link {
+        display: inline-block;
+        font-family: HiraginoSansGB-W3;
+        font-size: 13px;
+        color: rgba(62,62,62,0.7);
+        cursor: pointer;
+    }
+    .hotel-score {
+        width: 110px;
+        height: 55px;
+        border-left: dashed 1px rgba(0,0,0,0.35);
+        border-right: dashed 1px rgba(0,0,0,0.35);
+        margin-top: 16px;
+        font-family: HiraginoSansGB-W3;
+        font-size: 14px;
+        color: #3E3E3E;
+        text-align: center;
+    }
+    .hotel-score>span {
+        display: block;
+        line-height: 21px;
+        margin-bottom: 11px;
+        font-size: 13px;
+    }
+    .score {
+        font-family: HiraginoSansGB-W6;
+        font-size: 14px;
+        color: #5944C3;
+    }
+    .hotel-price {
+        margin-top: 16px;
+    }
+    .hotel-price>span {
+        display: block;
+        font-family: HiraginoSansGB-W3;
+        font-size: 13px;
+        color: #000000;
+        line-height: 28px;
+        margin-right: 12px;
+    }
+    .hotel-pricered {
+        font-family: PingFangSC-Semibold;
+        font-size: 20px;
+        color: #FB430A;
+    }
+    .tosee {
+        width: 94px;
+        height: 34px;
+        background: #5944C3;
+        border-radius: 2px;
+        font-family: PingFangSC-Semibold;
+        font-size: 14px;
+        color: #FFFFFF;
+    }
+    /* 地图 */
+    .map {
+        width: 323px;
+        height: 447px;
+        background: #f1f1f1;
+    }
+/* 列表排序end */
+footer {
+    margin-top: 56px;
+}

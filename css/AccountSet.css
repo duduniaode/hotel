@@ -1,22 +1,11 @@
 
-
-
-/* 内容区start */
-    .main-content {
+    main {
         width: 695px;
-        height: 450px;
-        background: #FFFFFF;
+        height: 447px;
+        margin: 33px auto auto auto;
         box-shadow: 0 0 4px 0 rgba(0,0,0,0.12), 0 4px 4px 0 rgba(0,0,0,0.18);
-        margin: 33px auto 469px auto;
-       
-        /* position: absolute;
-        left: 370px;
-        top: 33px; */
-        /* margin-top: 33px;
-        margin-left: 370px; */
     }
-    /* 标题 */
-    .account-title {
+    .main-title {
         height: 58px;
         line-height: 58px;
         text-indent: 2em;
@@ -26,142 +15,116 @@
         letter-spacing: 0;
         border-bottom: 3px solid rgba(0,0,0,0.2);
     }
-    /* 内容 */
-    .account-content {
-        padding-top: 24px;
-        
-    }
-    .account-content li {
+    /* 账户内容 */
+    .account-ul {
+        margin-left: 47px;
+        margin-top: 24px;
         font-family: HiraginoSansGB-W3;
         font-size: 14px;
         color: #222629;
         letter-spacing: 0;
-        margin-left: 74px;
     }
-    /* 上传头像 */
-    .upimg-li {
-        line-height: 50px;
-        position: relative;
-    }
-    .upimg-li .upimg {
-        display: inline-block;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        margin-left: 18px;
-        background: rgba(0,0,0,0.2);
-    }
-    .upimg-text {
+    input,button {
         font-family: PingFangSC-Regular;
-        font-size: 10px;
-        color: #fff;
+        font-size: 12px;
+        color: #222629;
         letter-spacing: 0;
-        position: absolute;
-        top: 0px;
-        left: 63px;
-        cursor: pointer;
+        border-radius: 3px;
     }
-    #up-head {
+    #file-img {
         position: absolute;
         left: -10000px;
     }
-    /* 昵称 */
-    .username-li {
-        margin-top: 10px;
-        margin-bottom: 39px;
-        
+    .img-div {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: rgba(0,0,0,0.2);
+    }
+    .img-div span {
+        color: #fff;
+        cursor: pointer;
+        font-size: 10px;
+        margin-left: 3px;
+    }
+    .account-text {
+        display: inline-block;
+        height: 14px;
+        width: 80px;
+        text-align: right;
+        margin-right: 18px;
+    }
+    button {
+        cursor: pointer;
+        font-size: 14px;
+        color: #FFF;
+    }
+    .headimg-li {
+        /* height: 50px; */
+        line-height: 50px;
+    }
+    .username-li,.wecaht-li {
+        line-height: 100px;
     }
     .username {
-        margin-left: 18px;
-        border: 1px solid rgba(34,48,41,0.2);
-        border-radius: 3px;
-        height: 24px;
-        width: 117px;
-    }
-    /* 手机号码 */
-    .pnumber,.password {
-        margin-left: 18px;
-    }
-    /* 微信 */
-    .wechat-li {
-        margin-top: 37px;
-        margin-bottom: 38px;
-        line-height: 24px;
-        position: relative;
-    }
-    .account-content input {
         width: 117px;
         height: 24px;
-        margin-left: 18px;
-        text-indent: 2px;
+        text-indent: 1em;
+        border: 1px solid rgba(34,38,41,0.2);
     }
-    .binding,.btn-modify {
-        height: 24px;
+    .modify-pic {
+        width: 15.8px;
+        height: 14.9px;
+        margin-top: -2px;
+        margin-left: 20px;
+    }
+    .wechat-btn,.modify {
         width: 61px;
-        margin-left: 18px;
+        height: 24px;
         background: #5944C3;
         border-radius: 3px 3px 0 3px 3px;
-        font-family: PingFangSC-Regular;
-        font-size: 14px;
-        color: #FFFFFF;
-        letter-spacing: 0;
-        cursor: pointer;
     }
-    .btn-modify {
+    .modify {
         width: 100px;
         height: 30px;
-        margin-left: 50px;
         margin-top: 20px;
+        margin-left: 140px;
     }
-    .wechat-all {
+    /* 二维码 */
+    .bg-div {
         width: 100%;
-        height: 1070px;
+        min-width: 1440px;
+        height: 1066px;
+        position: absolute;
         left: 0;
         top: 0;
-        bottom: -100px;
-        position: absolute;
+        bottom: 0;
+        right: 0;
         background: rgba(0,0,0,0.35);
-        /* z-index: 1; */
     }
     .wechat-div {
-        margin: 223px auto auto 600px;
         width: 304px;
         height: 369px;
-        background: #fff;
+        background: #ffffff;
+        margin: 268px auto auto auto;
         font-family: PingFangSC-Regular;
         font-size: 14px;
         color: #3E3E3E;
         letter-spacing: 0;
+        text-align: center;
     }
     .wechat-div span {
-        display: block;
-        padding-top: 44px;
-        /* margin: 44px auto auto auto; */
-        text-align: center;
-        
+        display: inline-block;
+        margin-top: 44px;
+        margin-bottom: 32px;
     }
     .wechat {
         width: 218px;
         height: 218px;
-        background: #D8D8D8;
-        margin: 32px auto auto auto;
+        margin: auto;
+        background: #d8d8d8;
     }
     .wechat img {
         width: 218px;
         height: 218px;
     }
-    .account-content .pnumber-li {
-        margin-left: 47px;
-    }
-    .pnumber,.password {
-        border: transparent;
-    }
-    .password {
-        display: inline-block;
-        cursor: pointer;
-        width: 100px;
-        background: url(../img/icon_edit.png) no-repeat;
-        background-position: 61px;
-        background-size: 15.8px 14.9px;
-    }
-/* 内容区end */

@@ -1,64 +1,73 @@
 
-/* 登录框开始 */
-    .login-div {
-        width: 449px;
-        height: 465px;
-        margin: auto 215px auto auto;
-        background: #fff;
-    }
-    .login-content {
-        width: 379px;
+
+.login-box {
+    width: 449px;
+    height: 465px;
+    margin-right: 215px;
+}
+/* 标题start */
+    .box-title {
         margin: 0 auto;
     }
-    /* 登录标题 */
-    .login-title {
-        width: 449px;
-        height: 48px;
-    }
-    .login-title li,.login-title button {
+    .box-title button {
         width: 224px;
+        height: 48px;
         font-size: 18px;
+        color: #3E3E3E;
         border-radius: 0;
+        background: #CFC8F4;
     }
-    .account-login-title {
+    .box-title .login-click {
         position: relative;
+        width: 225px;
+        background: #5944C3;
+        color: #fff;
     }
-    .code-login-title {
-        position: relative;
+    .login-click span {
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 47px;
+        left: 101px;
+        border-top: 10px solid #5944C3;
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
     }
-    .account-login {
-        margin: 61.3px auto 57px auto;
+    .login-box .account-login {
+        display: block;
+        margin-top: 67px;
+    }
+/* 标题end */
+/* 账号登录start */
+    .account-login .username-input {
+        background: url(../img/user_img.png) no-repeat 7px 9px;
+    }
+    .account-login .username-input:focus {
+        background: url(../img/user_img_selected.png) no-repeat 7px 9px;
+    }
+    .account-login .password-input {
+        background: url(../img/user_pwd.png) no-repeat 7px 11px;
+    }
+    .account-login .password-input:focus {
+        background: url(../img/user_pwd_selected.png) no-repeat 7px 11px;
     }
     .account-login input {
-        margin-bottom: 5px;
+        text-indent: 2em;
     }
-    .forget-div {
-        margin: -10px 0 16px auto;
-    }
-    .forget {
-        font-family: HiraginoSansGB-W3;
+    .forget-password {
+        display: block;
         font-size: 14px;
+        margin-bottom: 15px;
+    }
+    .forget-password a {
+        font-family: HiraginoSansGB-W3;
         color: #3E3E3E;
         letter-spacing: 0;
     }
-    
-     /* 三角 */
-     .triangle {
-         position: absolute;
-         left: 109px;
-         top: 40px;
-         border-top: 6px solid transparent;
-         border-left: 6px solid transparent;
-         border-right: 6px solid transparent;
-         border-bottom: 6px solid transparent;
-     }
-     .triangle-selected {
-        border-top: 6px solid #5944C3;
-     }
-    /* 短信快捷登录开始 */
-        .code-login {
-            margin: 45px auto;
-        }
-    /* 短信快捷登录结束 */
-  
-/* 登录框结束 */
+/* 账号登录end */
+/* 短信快捷登录start */
+.login-box .message-login {
+    margin-top: 47px;
+}
+/* 短信快捷登录end */

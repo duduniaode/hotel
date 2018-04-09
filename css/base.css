@@ -1,13 +1,10 @@
-    
 /*css 初始化 */
 html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, 
 h6, form, fieldset, legend, img {
     margin: 0;
     padding: 0;
 }
-
 fieldset, img, input, button { 			/*fieldset
-
 组合表单中的相关元素*/
     border: none;
     padding: 0;
@@ -15,12 +12,10 @@ fieldset, img, input, button { 			/*fieldset
     /* //外边框轮廓线 */
     outline-style: none;
 }
-
 ul, ol {
 /*清除列表风格*/
     list-style: none;	
     /* display: inline-block;			 */
-
 }
 
 input {
@@ -28,7 +23,16 @@ input {
     padding-bottom: 0;
     font-family: "SimSun", "宋体";
 }
-
+/* input type="number",移出上下箭头 */
+/* chrome浏览器移除 */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance:textfield;
+}
+/* firefox浏览器下移除 */
+input[type="number"]{
+    -moz-appearance:textfield;
+}
 select, input {
 /*垂直居中*/
     vertical-align: middle;

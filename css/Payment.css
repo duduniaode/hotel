@@ -1,0 +1,129 @@
+main {
+    width: 875px;
+    margin: 0 auto;
+    margin-top: 86px;
+}
+.apis-pay-title {
+    font-family: PingFangSC-Regular;
+    font-size: 24px;
+    color: #222629;
+    letter-spacing: 0;
+    margin-bottom: 30px;
+}
+.hotel-div,.pay-div {
+    width: 875px;
+    height: 205px;
+    background: #FFFFFF;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.12), 0 4px 4px 0 rgba(0,0,0,0.18);
+}
+.hotel-div {
+    margin-bottom: 25px;
+}
+.hotel-img,.hotel-img img {
+    width: 230px;
+    height: 155px;
+}
+.hotel-img {
+    margin-top: 27px;
+    margin-left: 28px;
+}
+.hotel-name-div {
+    margin-top: 76px;
+    margin-left: 15px;
+}
+.hotel-name-div span {
+    display: block;
+}
+.hotel-name {
+    font-family: HiraginoSansGB-W6;
+    font-size: 16px;
+    color: #3E3E3E;
+    margin-bottom: 13px;
+}
+.room-name {
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #222629;
+    letter-spacing: 0;
+}
+.price {
+    line-height: 205px;
+    margin-right: 33px;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #222629;
+    letter-spacing: 0;
+}
+.price span,.pay-price span {
+    color: #FF4949;
+    font-family: HiraginoSansGB-W6;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 17px;
+}
+/* 支付方式 */
+    .pay-title {
+        margin-top: 18px;
+        margin-left: 31px;
+        margin-bottom: 30px;
+        font-family: ArialMT;
+        font-size: 14px;
+        color: #222629;
+        letter-spacing: 0;
+    }
+    .pay-div img {
+        width: 134px;
+        height: 47px;
+        margin-top: 11px;
+        margin-left: 15px;
+    }
+    .alipay-div,.wechat-div {
+        position: relative;
+        width: 175px;
+        height: 70px;
+        color: #fff;
+        font-size: 12px;
+    }
+    .check-mark {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        display: block;
+        border-top: 8px solid transparent;
+        border-left: 8px solid transparent;
+        border-bottom: 8px solid #FF5D5B;
+        border-right: 8px solid #FF5D5B;
+    }
+    .check-mark span {
+        position: absolute;
+        top: -4px;
+        right: -7px;
+    }
+    .pay-way-active {
+        border: 2px solid #FF5D5B;
+    }
+    .alipay-div {
+        margin-left: 42px;
+    }
+    .wechat-div {
+        margin-left: 20px;
+    }
+    /* 支付 */
+    .pay-price {
+        margin-top: 39px;
+        margin-bottom: 24px;
+        font-family: PingFangSC-Regular;
+        font-size: 14px;
+        color: #3E3E3E;
+        letter-spacing: 0;
+    }
+    .pay-btn {
+        width: 113px;
+        height: 36px;
+        background: #5944C3;
+        border-radius: 3px;
+        font-family: PingFangSC-Regular;
+        font-size: 14px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+    }

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>酒店详情-酒店</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/other-public.css">
+    <link rel="stylesheet" href="../css/HotelDetails.css">
+</head>
+<body>
+    <main>
+       <!-- 酒店标题start -->
+        <div class="hotel-title-div clearfix">
+        </div>
+        <img src="" alt="">
+       <!-- 酒店标题end -->
+       <!-- 酒店图片start -->
+        <div class="hotel-picture">
+        </div>
+       <!-- 酒店图片end -->
+       <!-- 中间导航栏start -->
+        <div class="middle-nav">
+            <ul>
+                <li ><a href="#room-search-div" class=" middle-nav-active" id="room-reservation-text">房型预定</a></li>
+                <li><a href="#hotel-information-div"  id="hotel-information-text">酒店信息</a></li>
+                <li><a href="#traffic-position-div"  id="traffic-position-text">交通位置</a></li>
+                <li><a href="#user-review-div" id="user-review-text">用户评价</a></li>
+            </ul>
+        </div>
+       <!-- 中间导航栏end -->
+       <!-- 房型预定start -->
+        <!-- 选择时间 -->
+        <div class="room-search-div clearfix" id="room-search-div">
+            <ul>
+                <li class="fl">
+                    入住
+                </li>
+                <li class="in-room-li fl">
+                    <div class="in-room-div time_input">
+                        <span class="fl"></span>
+                        <!-- <span class="fr">星期四</span> -->
+                    </div>
+                    <!-- <input type="text" class="in-room-input"> -->
+                    <div class="date_time clearfix" style="display:none" >
+                        <div class="now_month_div">
+                            <!-- 年月 -->
+                            <div class="header">
+                                <button class="last_year"></button>
+                                <button class="last_month"></button>
+                                <div class="years">
+                                    <span class="year"></span>年&nbsp;<span class="month"></span>月
+                                </div>
+                            </div>
+                            <div class="week">
+                                <ul>
+                                    <li>日</li>
+                                    <li>一</li>
+                                    <li>二</li>
+                                    <li>三</li>
+                                    <li>四</li>
+                                    <li>五</li>
+                                    <li>六</li>
+                                </ul>
+                            </div>
+                            <div class="day">
+                                <ul>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="next_month_div">
+                            <div class="header">
+                                <button class="next_year"></button>
+                                <button class="next_month"></button>
+                                <div class="years">
+                                    <span class="year"></span>年&nbsp;<span class="month"></span>月
+                                </div>
+                            </div>
+                            <div class="week">
+                                <ul>
+                                    <li>日</li>
+                                    <li>一</li>
+                                    <li>二</li>
+                                    <li>三</li>
+                                    <li>四</li>
+                                    <li>五</li>
+                                    <li>六</li>
+                                </ul>
+                            </div>
+                            <div class="day">
+                                <ul>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="fl">
+                    退房
+                </li>
+                <li class="out-room-li fl">
+                    <div class="out-room-div">
+                        <span class="fl"></span>
+                        <!-- <span class="fr">星期四</span> -->
+                    </div>
+                    <!-- <input type="text" class="out-room-input"> -->
+                    <div class="date_time clearfix" style="display:none" >
+                        <div class="now_month_div">
+                            <!-- 年月 -->
+                            <div class="header">
+                                <button class="last_year"></button>
+                                <button class="last_month"></button>
+                                <div class="years">
+                                    <span class="year"></span>年&nbsp;<span class="month"></span>月
+                                </div>
+                            </div>
+                            <div class="week">
+                                <ul>
+                                    <li>日</li>
+                                    <li>一</li>
+                                    <li>二</li>
+                                    <li>三</li>
+                                    <li>四</li>
+                                    <li>五</li>
+                                    <li>六</li>
+                                </ul>
+                            </div>
+                            <div class="day">
+                                <ul>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="next_month_div">
+                            <div class="header">
+                                <button class="next_year"></button>
+                                <button class="next_month"></button>
+                                <div class="years">
+                                    <span class="year"></span>年&nbsp;<span class="month"></span>月
+                                </div>
+                            </div>
+                            <div class="week">
+                                <ul>
+                                    <li>日</li>
+                                    <li>一</li>
+                                    <li>二</li>
+                                    <li>三</li>
+                                    <li>四</li>
+                                    <li>五</li>
+                                    <li>六</li>
+                                </ul>
+                            </div>
+                            <div class="day">
+                                <ul>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="fl">
+                    共<span class="stay-days">2</span>晚
+                </li>
+                <li class="fl">
+                    <button class="search-btn">查询</button>
+                </li>
+            </ul>
+           
+        </div>
+        <!-- 预定 -->
+        <ul class="room-reservation-title">
+            <li>房型详情</li>
+            <li>床型</li>
+            <li>面积</li>
+            <li>上网方式</li>
+            <li>早餐</li>
+            <li>窗户</li>
+            <li>取消规则</li>
+            <li>房价</li>
+        </ul>
+        <div class="room-reservation-div">
+            <!-- 房间信息 -->
+           
+            <ul class="room-reservation-information">
+                <li class="room-layout">豪华大床房</li>
+                <li class="room-bed-layout">大床1.8米</li>
+                <li class="room-area">45M</li>
+                <li class="room-way-internet">WIFI</li>
+                <li class="room-breakfast">双早</li>
+                <li class="room-window">有窗</li>
+                <li class="room-cancel-rule">免费取消</li>
+                <li class="room-price">￥<span>788</span></li>
+                <li class="fr"><button class="reserve-btn no-room">预定</button></li>
+            </ul>
+        </div>
+       <!-- 房型预定end -->
+       <!-- 酒店信息start -->
+        <div class="hotel-information-div" id="hotel-information-div">
+            <!-- 酒店介绍 -->
+           
+
+        </div>
+       <!-- 酒店信息end -->
+       <!-- 交通位置start -->
+        <div class="traffic-position-div" id="traffic-position-div">
+            <span>交通位置</span>
+            <div class="map" id="map">
+
+            </div>
+        </div>
+       <!-- 交通位置end -->
+       <!-- 用户评价start -->
+        <div class="user-review-div" id="user-review-div">
+                <div class="user-review-title">用户评价</div>
+                <ul class="user-review-nav">
+                    <li class="user-review-all review-type-active">全部</li>
+                    <li class="user-review-praise">好评</li>
+                    <li class="user-review-worse">差评</li>
+                    <li class="user-review-haveimg">有图</li>
+                </ul>
+        </div>
+       <!-- 用户评价end -->
+       <!-- 分页start -->
+        <div class="paging ">
+            <button class="pre-page fl" disabled="disabled"></button>
+            <ul class="fl">
+                <!-- <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>...</li>
+                <li>12</li>
+                <li>13</li> -->
+            </ul>
+            <button class="next-page fr" disabled="disabled"></button>
+        </div>
+       <!-- 分页end -->
+    </main>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<!-- 地图 -->
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=GhVG3L2qIqRLRNK3rqqUFKHxsZzsXXt1"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/url.js"></script>
+<script src="../js/other-public.js"></script>
+<script src="../js/HotelDetails.js"></script>
+</html>
