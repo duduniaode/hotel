@@ -8,7 +8,8 @@ $(document).ready(function(){
     addHotelDetails();
      // 日历
      Add_a_calendar( new Date().getFullYear() , new Date().getMonth()+1 , new Date().getDate()); //页面打开加载左右日历
-     getHotelReview(1,1,'all');
+    //  请求评论
+     getHotelReview(1,1,"all");
 })
 
 // 日历start
@@ -535,6 +536,7 @@ $(document).ready(function(){
             data: {
                 hotelId: hotelId,
                 limit: limit,
+                page: page,
                 // page: 2,
                 sort:sort
             },
@@ -543,6 +545,7 @@ $(document).ready(function(){
             }
         })
         .done(function(data){
+            console.log(data.code);
             if(data.code == "success"){
                 var review_data = data.data.evaluate;
                 var review_list = "";
@@ -590,15 +593,25 @@ $(document).ready(function(){
                 }
                 // 之前数据移除
                 $(".user-review-div").find(".user-review").remove();
+                $(".user-review-div").find(".no-review").remove();
                 // 插入数据
                 $(".user-review-div").append(review_list);
                 // 评论数量
                 var count = data.data.count;
                 localStorage.count = data.data.count;
                 console.log("count:"+count);
+                // 分页显示
+                $(".paging").show();
                 getPaging(count,1,page);
             }else{
-                alert("酒店不存在或该酒店没有评论");
+                // alert("该酒店没有评论");
+                // // 之前数据移除
+                $(".user-review-div").find(".user-review").remove();
+                $(".user-review-div").find(".no-review").remove();
+                // 插入数据
+                $(".user-review-div").append(' <div class="no-review">该酒店还没有'+$(".review-type-active").html()+'评价哦~</div>');
+                // 分页隐藏
+                $(".paging").hide();
                 return;
             }
         })
@@ -612,18 +625,21 @@ $(document).ready(function(){
         $(this).siblings("li").removeClass("review-type-active");
         $(this).addClass("review-type-active");
         sort = "praise";
+        getHotelReview(1,1,sort);
     })
     // 差评
     $(".user-review-worse").click(function(){
         $(this).siblings("li").removeClass("review-type-active");
         $(this).addClass("review-type-active");
         sort = "negative";
+        getHotelReview(1,1,sort);
     })
     // 有图
     $(".user-review-haveimg").click(function(){
         $(this).siblings("li").removeClass("review-type-active");
         $(this).addClass("review-type-active");
         sort = "picture";
+        getHotelReview(1,1,sort);
     })
  // 前后页点击
     $(".pre-page").click(function(){
@@ -644,8 +660,10 @@ $(document).ready(function(){
  //li标签点击事件
     $(".paging ul").on("click","li",function(){
         if($(this).html()!="..."){
+            $(this).siblings("li").removeClass("page-active");
             $(this).addClass("page-active");
             var page = $(this).html();
+            console.log(page);
             getHotelReview(1,page,sort);
         }
     })

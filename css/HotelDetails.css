@@ -450,6 +450,11 @@ main {
         background: #5944C3;
         color: #fff;
     }
+    .user-review-div .no-review {
+        text-align: center;
+        margin: 30px auto 10px;
+        font-size: 20px;
+    }
 /* 用户评价end */
 footer {
     margin-top: 21px;
